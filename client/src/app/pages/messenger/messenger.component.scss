@@ -1,0 +1,61 @@
+body {
+    background-color: #f0f0f0 ;
+    font-family: sans-serif
+}
+.main {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+.container {
+    width: 70%;
+    margin: 0px auto;
+}
+.col-user {
+    width: 20%;
+    height: 450px;
+    background-color: #f0f0f0;
+    border: 1px solid #dbdbdb;
+}
+.col-chat {
+    width: 40%;
+    height: 450px;
+    background-color: #f0f0f0;
+    border: 1px solid #dbdbdb;
+}
+.head {
+    width: 100%;
+    text-align: center;
+    border: 1px solid #dbdbdb;
+    padding: 20px;
+}
+.head-user{
+    width: 100%;
+    text-align: center;
+    padding-top: 2px ;
+    padding-bottom: 10px;
+    border: 1px solid #dbdbdb;
+}
+.edit{
+    float: right;
+    margin-right: 20px;
+}
+.content-user{
+    padding: 24px;
+
+}
+.text-blue{
+    color:#0496eb;
+}
+.foat-right{
+    float: right;
+}
+.user-chat{
+    margin-top: 20px;
+}
+.img-wrapper-circle{
+    width: 60px;
+    height: 60px;
+    overflow: hidden;
+    border-radius: 100px;
+}
