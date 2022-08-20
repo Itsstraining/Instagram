@@ -18,7 +18,8 @@ import { AuthEffect } from './effects/auth.effect';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+
   ],
   imports: [
     BrowserModule,

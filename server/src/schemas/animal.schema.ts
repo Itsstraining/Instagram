@@ -11,7 +11,9 @@ export class Animal {
     @Prop({
         required: true
     })
-    name: string;
+    name: string;   
+   
+    
 
 }
 const animal = new Animal();

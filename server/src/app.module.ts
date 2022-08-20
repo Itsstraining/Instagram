@@ -11,7 +11,7 @@ import { AuthMiddleware } from './middlewares/auth.middleware';
     ServeStaticModule.forRoot({
       rootPath: join(__dirname, '..', 'public'),
     }),
-    MongooseModule.forRoot("mongodb://localhost:3001/instagram"),
+    MongooseModule.forRoot("mongodb+srv://congpham:123@cluster0.e3gxoqz.mongodb.net/?retryWrites=true&w=majority"),
     AnimalModule
   ],
   controllers: [AppController],
