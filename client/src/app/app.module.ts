@@ -11,6 +11,10 @@ import { environment } from '../environments/environment';
 import { provideAuth,getAuth } from '@angular/fire/auth';
 import { provideFirestore,getFirestore } from '@angular/fire/firestore';
 import { provideStorage,getStorage } from '@angular/fire/storage';
+import { StoreModule } from '@ngrx/store';
+import { EffectsModule } from '@ngrx/effects';
+import { authReducer } from './reducers/auth.reducer';
+import { AuthEffect } from './effects/auth.effect';
 
 @NgModule({
   declarations: [
@@ -26,7 +30,13 @@ import { provideStorage,getStorage } from '@angular/fire/storage';
     provideFirebaseApp(() => initializeApp(environment.firebase)),
     provideAuth(() => getAuth()),
     provideFirestore(() => getFirestore()),
-    provideStorage(() => getStorage())
+    provideStorage(() => getStorage()),
+    StoreModule.forRoot({
+      auth:authReducer
+    }, {}),
+    EffectsModule.forRoot([
+      AuthEffect,
+    ])
   ],
   providers: [],
   bootstrap: [AppComponent]

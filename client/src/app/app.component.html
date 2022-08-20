@@ -1,10 +1,13 @@
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 <nb-layout>
 
   <nb-layout-header fixed>
-    <!-- Insert header here -->
-  </nb-layout-header>
+    <button (click)="login()">Login</button>
 
-  <nb-layout-column>
+  </nb-layout-header>
+  
+  <nb-layout-column style="padding: 0;">
     <router-outlet></router-outlet>
   </nb-layout-column>
 
@@ -12,4 +15,4 @@
     <!-- Insert footer here -->
   </nb-layout-footer>
 
-</nb-layout>
+</nb-layout> 
