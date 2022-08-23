@@ -70,7 +70,7 @@
           </div>
 
 
-          <div class="heart">
+          <div (click)="login()" class="heart">
             <svg aria-label="Activity Feed" class="_8-yf5 " color="#262626" fill="#262626" height="30" role="img"
               viewBox="0 0 48 48" width="20">
               <path
@@ -83,7 +83,7 @@
 
           <div class="profile-img">
 
-            <div routerLink="/profile" > <span style="width:20px;height:20px; border-radius: 1px solid #fafafa;">
+            <div routerLink="/profile"> <span style="width:20px;height:20px; border-radius: 1px solid #fafafa;">
                 <img style="width:25px;height:25px;border-radius: 100%;"
                   src="https://static1.dienanh.net/upload/202206/e82dee6d-469f-4aa7-8c17-afeb1f1da4f0.jpg" alt="">
               </span>
@@ -130,7 +130,7 @@
 
   </nb-layout-header>
 
-  <nb-layout-column style="padding: 0;" >
+  <nb-layout-column style="padding: 0;">
     <router-outlet></router-outlet>
   </nb-layout-column>
 
