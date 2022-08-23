@@ -7,7 +7,7 @@ export class PostController {
     constructor(private PostService: PostService){}
  
     
-    @Get('/all')
+    @Get('/all')   
     public async testPost(){
         return await this.PostService.getAllPost();
     }
