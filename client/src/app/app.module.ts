@@ -4,21 +4,22 @@ import { BrowserModule } from '@angular/platform-browser';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { NbThemeModule, NbLayoutModule } from '@nebular/theme';
+import { NbThemeModule, NbLayoutModule, NbDialogModule, NbCardModule, NbDialogService, NbButtonModule } from '@nebular/theme';
 import { NbEvaIconsModule } from '@nebular/eva-icons';
-import { initializeApp,provideFirebaseApp } from '@angular/fire/app';
+import { initializeApp, provideFirebaseApp } from '@angular/fire/app';
 import { environment } from '../environments/environment';
-import { provideAuth,getAuth } from '@angular/fire/auth';
-import { provideFirestore,getFirestore } from '@angular/fire/firestore';
-import { provideStorage,getStorage } from '@angular/fire/storage';
+import { provideAuth, getAuth } from '@angular/fire/auth';
+import { provideFirestore, getFirestore } from '@angular/fire/firestore';
+import { provideStorage, getStorage } from '@angular/fire/storage';
 import { StoreModule } from '@ngrx/store';
 import { EffectsModule } from '@ngrx/effects';
 import { authReducer } from './reducers/auth.reducer';
 import { AuthEffect } from './effects/auth.effect';
-
+import { CreatePostComponent } from './components/create-post/create-post.component';
 @NgModule({
   declarations: [
     AppComponent,
+    CreatePostComponent,
 
   ],
   imports: [
@@ -27,19 +28,22 @@ import { AuthEffect } from './effects/auth.effect';
     BrowserAnimationsModule,
     NbThemeModule.forRoot({ name: 'default' }),
     NbLayoutModule,
+    NbCardModule,
     NbEvaIconsModule,
+    NbButtonModule,
+    NbDialogModule.forRoot(),
     provideFirebaseApp(() => initializeApp(environment.firebase)),
     provideAuth(() => getAuth()),
     provideFirestore(() => getFirestore()),
     provideStorage(() => getStorage()),
     StoreModule.forRoot({
-      auth:authReducer
+      auth: authReducer
     }, {}),
     EffectsModule.forRoot([
       AuthEffect,
     ])
   ],
-  providers: [],
+  providers: [NbDialogService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

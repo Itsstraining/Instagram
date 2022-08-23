@@ -56,33 +56,36 @@
 
 }
 
-.home{
-  margin: 0px;
-  position: relative;
-  top: 3px;
-}
-.explore{
+.home {
   margin: 0px;
   position: relative;
   top: 3px;
 }
 
-.create{
+.explore {
   margin: 0px;
   position: relative;
   top: 3px;
 }
 
-.compass{
+.create {
   margin: 0px;
   position: relative;
   top: 3px;
 }
-.heart{
+
+.compass {
   margin: 0px;
   position: relative;
   top: 3px;
 }
+
+.heart {
+  margin: 0px;
+  position: relative;
+  top: 3px;
+}
+
 .profile-img {
   cursor: pointer;
   margin: 0px;
@@ -141,4 +144,16 @@
 
 }
 
-;
+.home:hover,
+.explore:hover,
+.create:hover,
+.compass:hover,
+.heart:hover,
+.profile-img:hover {
+  cursor: pointer;
+}
+
+nb-card {
+  margin: auto;
+  width: 800px;
+}

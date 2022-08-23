@@ -19,8 +19,6 @@
             type="text" placeholder="Search">
         </div>
 
-
-
         <div class="icons">
 
           <div class="home">
@@ -32,8 +30,6 @@
             </svg>
           </div>
 
-
-
           <div class="explore">
             <svg aria-label="Direct" class="_8-yf5 " color="#262626" fill="#262626" height="30" role="img"
               viewBox="0 0 48 48" width="20">
@@ -43,9 +39,18 @@
             </svg>
           </div>
 
+          <ng-template #dialog let-data let-ref="dialogRef">
+            <nb-card>
+              <nb-card-header>Template Dialog</nb-card-header>
+              <p>Hello</p>
+              <nb-card-body>{{ data }}</nb-card-body>
+              <nb-card-footer>
+                <button nbButton (click)="ref.close()">Close Dialog</button>
+              </nb-card-footer>
+            </nb-card>
+          </ng-template>
 
-
-          <div class="create">
+          <div (click)="open(dialog)" class="create">
             <svg aria-label="New Post" class="_8-yf5 " color="#262626" fill="#262626" height="30" role="img"
               viewBox="0 0 48 48" width="20  ">
               <path
