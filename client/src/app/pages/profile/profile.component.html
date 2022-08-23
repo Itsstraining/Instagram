@@ -8,29 +8,27 @@
 
 			<div class="profile-image">
 
-				<img src="https://stickershop.line-scdn.net/stickershop/v1/product/24183/LINEStorePC/main.png;compress=true" alt="">
+				<img [src]="user.photoURL" alt="">
 
 			</div>
 
 			<div class="profile-user-settings" >
 
-				<h1 class="profile-user-name">Đắc_Công</h1>
+				<h1 class="profile-user-name">{{user.displayName}}</h1>
 
 				<button class="btn profile-edit-btn">Edit Profile</button>
-<<<<<<< HEAD
-<<<<<<< HEAD
+
        		    <button class="btn profile-setting-btn" aria-label="Profile Settings"><span class="material-symbols-outlined">settings</span></button>
-=======
+
         <button class="btn profile-setting-btn" aria-label="Profile Settings"  style="top: 165px;"><span class="material-symbols-outlined">settings</span></button>
 
->>>>>>> 54afc88d0c7b9b03ab5af0c123fe51efbd974e96
 
 
 
 
-=======
+
         <button class="btn profile-setting-btn" aria-label="Profile Settings"><span class="material-symbols-outlined">settings</span></button>
->>>>>>> 272ced97d4521b1689d1b9195399076737b1c791
+
 			</div>
 
 			<div class="profile-stats">

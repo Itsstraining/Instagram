@@ -57,10 +57,30 @@
               </path>
             </svg>
           </div>
+<!--        
+          <ng-template #dialog let-data let-ref="dialogRef">
+            <nb-card>
+              <nb-card-header style="position: relative;text-align: center;font-size: 20px;">Create new Post
+                <div class="s">
+                  <button class="bt">share</button>
+                </div>
 
 
 
-          <div class="compass">
+              </nb-card-header>
+              <img class="imgs" src="https://statics.vincom.com.vn/tin-tuc-su-kien/anh_thumbnail/MicrosoftTeams-image-(766).png" alt="">
+              <div class="p"><span style="width:20px;height:20px; border-radius: 1px solid #fafafa;">
+                <img style="width:25px;height:25px;border-radius: 100%;"
+                  src="https://static1.dienanh.net/upload/202206/e82dee6d-469f-4aa7-8c17-afeb1f1da4f0.jpg" alt="">
+              </span>
+            </div>
+           
+
+
+            </nb-card>
+          </ng-template> -->
+          <!-- (click)="open(dialog)" -->
+          <div class="compass" >
             <svg aria-label="Find People" class="_8-yf5 " color="#262626" fill="#262626" height="30" role="img"
               viewBox="0 0 48 48" width="20">
               <path clip-rule="evenodd"
@@ -84,8 +104,8 @@
           <div class="profile-img">
 
             <div routerLink="/profile"> <span style="width:20px;height:20px; border-radius: 1px solid #fafafa;">
-                <img style="width:25px;height:25px;border-radius: 100%;"
-                  src="https://static1.dienanh.net/upload/202206/e82dee6d-469f-4aa7-8c17-afeb1f1da4f0.jpg" alt="">
+                <img *ngIf="user" style="width:25px;height:25px;border-radius: 100%;"
+                  [src]="user.photoURL" alt="">
               </span>
             </div>
             <div class="drop-down">
@@ -135,3 +155,5 @@
   </nb-layout-column>
 
 </nb-layout>
+
+<button class="ac">ajkasdhaskj</button>

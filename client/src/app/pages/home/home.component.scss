@@ -183,8 +183,10 @@
   outline: none;
   text-transform: capitalize;
   font-size: 16px;
-  color: rgb(0,162,255);
+  // color: rgb(0,162,255);
+  color: #0095f6;
   opacity: 0.5;
+  
 }
 .reaction-wrapper{
   width: 100%;
@@ -232,6 +234,8 @@
   font-size: 14px;
   color: #000;
   margin-top: 10px;
+  width: 200px;
+  text-align: left;
   
 }
 
