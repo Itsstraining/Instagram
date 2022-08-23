@@ -19,8 +19,6 @@
             type="text" placeholder="Search">
         </div>
 
-
-
         <div class="icons">
 
           <div class="home">
@@ -32,8 +30,6 @@
             </svg>
           </div>
 
-
-
           <div class="explore">
             <svg aria-label="Direct" class="_8-yf5 " color="#262626" fill="#262626" height="30" role="img"
               viewBox="0 0 48 48" width="20">
@@ -43,9 +39,108 @@
             </svg>
           </div>
 
+          <ng-template #dialog let-data let-ref="dialogRef">
+            <nb-card>
+              <nb-card-header style="position: relative;text-align: center;font-size: 20px;">Create new Post
+                <div class="s">
+                  <button class="bt">share</button>
+                </div>
+              </nb-card-header>
+              <div class="dialog">
 
 
-          <div (click)="open()" class="create">
+              <!-- <img class="imgs" src="https://statics.vincom.com.vn/tin-tuc-su-kien/anh_thumbnail/MicrosoftTeams-image-(766).png" alt=""> -->
+
+              <nb-card-body>
+                <div class="dialog">
+                    <div class="dialog-option">
+                      <div class="dialog-option-img">
+                        <img src="https://media.discordapp.net/attachments/1004366655054430258/1010252696655253554/unknown.png?width=396&height=434" alt="">
+                      </div>
+                      <div class="dialog-option-img">
+                        <img src="https://media.discordapp.net/attachments/1004366655054430258/1010252696655253554/unknown.png?width=396&height=434" alt="">
+                      </div>
+                      <div class="dialog-option-img">
+                        <img src="https://media.discordapp.net/attachments/1004366655054430258/1010252696655253554/unknown.png?width=396&height=434" alt="">
+                      </div>
+                      <div class="dialog-option-img">
+                        <img src="https://media.discordapp.net/attachments/1004366655054430258/1010252696655253554/unknown.png?width=396&height=434" alt="">
+                      </div>
+                      <div class="dialog-option-img">
+                        <img src="https://media.discordapp.net/attachments/1004366655054430258/1010252696655253554/unknown.png?width=396&height=434" alt="">
+                      </div>
+                      <div class="dialog-option-img">
+                        <img src="https://media.discordapp.net/attachments/1004366655054430258/1010252696655253554/unknown.png?width=396&height=434" alt="">
+                      </div>
+                      <div class="dialog-option-img">
+                        <img src="https://media.discordapp.net/attachments/1004366655054430258/1010252696655253554/unknown.png?width=396&height=434" alt="">
+                      </div>
+                      <div class="dialog-option-img">
+                        <img src="https://media.discordapp.net/attachments/1004366655054430258/1010252696655253554/unknown.png?width=396&height=434" alt="">
+                      </div>
+                      <div class="dialog-option-img">
+                        <img src="https://media.discordapp.net/attachments/1004366655054430258/1010252696655253554/unknown.png?width=396&height=434" alt="">
+                      </div>
+                      <div class="dialog-option-img">
+                        <img src="https://media.discordapp.net/attachments/1004366655054430258/1010252696655253554/unknown.png?width=396&height=434" alt="">
+                      </div>
+                      <div class="dialog-option-img">
+                        <img src="https://media.discordapp.net/attachments/1004366655054430258/1010252696655253554/unknown.png?width=396&height=434" alt="">
+                      </div>
+                      <div class="dialog-option-img">
+                        <img src="https://media.discordapp.net/attachments/1004366655054430258/1010252696655253554/unknown.png?width=396&height=434" alt="">
+                      </div>
+                      <div class="dialog-option-img">
+                        <img src="https://media.discordapp.net/attachments/1004366655054430258/1010252696655253554/unknown.png?width=396&height=434" alt="">
+                      </div>
+                      <div class="dialog-option-img">
+                        <img src="https://media.discordapp.net/attachments/1004366655054430258/1010252696655253554/unknown.png?width=396&height=434" alt="">
+                      </div>
+                      <div class="dialog-option-img">
+                        <img src="https://media.discordapp.net/attachments/1004366655054430258/1010252696655253554/unknown.png?width=396&height=434" alt="">
+                      </div>
+                      <div class="dialog-option-img">
+                        <img src="https://media.discordapp.net/attachments/1004366655054430258/1010252696655253554/unknown.png?width=396&height=434" alt="">
+                      </div>
+                    </div >
+                    <div class="dialog-img">
+                     <img src="https://media.discordapp.net/attachments/1004366655054430258/1010252696655253554/unknown.png?width=396&height=434" alt="">
+
+                    </div>
+                </div>
+              </nb-card-body>
+              <!-- <nb-card-footer>
+                <button nbButton (click)="ref.close()">Close Dialog</button>
+              </nb-card-footer> -->
+              <!-- <div class="p">
+                <span style="width:20px;height:20px; border-radius: 1px solid #fafafa;">
+                <img style="width:25px;height:25px;border-radius: 100%;"
+                  src="https://static1.dienanh.net/upload/202206/e82dee6d-469f-4aa7-8c17-afeb1f1da4f0.jpg" alt="">
+              </span>
+
+
+            </div>
+
+              <div class="name">
+                <p>Đắc_Công</p>
+              </div>
+
+              <div class="write">
+                <input type="text" placeholder="...">
+              </div> -->
+              </div>
+
+
+            </nb-card>
+
+
+
+
+
+          </ng-template>
+
+
+          <div (click)="open(dialog)" class="create">
             <svg aria-label="New Post" class="_8-yf5 " color="#262626" fill="#262626" height="30" role="img"
               viewBox="0 0 48 48" width="20  ">
               <path
@@ -106,3 +201,4 @@
   </nb-layout-column>
 
 </nb-layout>
+
