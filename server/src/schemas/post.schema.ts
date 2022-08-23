@@ -14,5 +14,25 @@ export class Post{
         required: true,
     })
     title:string;
+    @Prop({
+        required: true,
+    })
+    content:string;
+    @Prop({
+        required: true,
+    })
+    comments:[];
+    @Prop({
+        required: true,
+    })
+    likes:[];
+    @Prop({
+        required: true,
+    })
+    status:string;
+  
+ 
+
 }
+export const PostSchema = SchemaFactory.createForClass(Post);
 

@@ -6,16 +6,22 @@ import { AnimalModule } from './modules/animal/animal.module';
 import { join } from 'path';
 import { ServeStaticModule } from '@nestjs/serve-static'
 import { AuthMiddleware } from './middlewares/auth.middleware';
+import { AnimalService } from './services/animal/animal.service';
+import { PostService } from './services/post/post.service';
+
+import { PostModule } from './modules/post/post.module';
+import { PostController } from './controllers/post/post.controller';
 @Module({
   imports: [
     ServeStaticModule.forRoot({
       rootPath: join(__dirname, '..', 'public'),
     }),
     MongooseModule.forRoot("mongodb+srv://congpham:123@cluster0.e3gxoqz.mongodb.net/?retryWrites=true&w=majority"),
-    AnimalModule
+    AnimalModule,
+    PostModule
   ],
-  controllers: [AppController],
-  providers: [AppService],
+  controllers: [AppController, PostController],
+  providers: [AppService, AnimalService, ],
 })
 export class AppModule implements NestModule {
   configure(consumer: MiddlewareConsumer) {
