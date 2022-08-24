@@ -34,6 +34,10 @@ export class PostService {
             return new HttpException(error.message, HttpStatus.BAD_REQUEST);
         }
     }
+   
+        
+    
+    
     async deletePost(id:string){
         return await this.postlModel.findByIdAndDelete(id);
     }

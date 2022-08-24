@@ -15,12 +15,10 @@ import { StoreModule } from '@ngrx/store';
 import { EffectsModule } from '@ngrx/effects';
 import { authReducer } from './reducers/auth.reducer';
 import { AuthEffect } from './effects/auth.effect';
-import { CreatePostComponent } from './components/create-post/create-post.component';
+
 @NgModule({
   declarations: [
     AppComponent,
-    CreatePostComponent,
-
   ],
   imports: [
     BrowserModule,
@@ -41,7 +39,9 @@ import { CreatePostComponent } from './components/create-post/create-post.compon
     }, {}),
     EffectsModule.forRoot([
       AuthEffect,
-    ])
+    ]),
+    NbDialogModule.forRoot(),
+
   ],
   providers: [NbDialogService],
   bootstrap: [AppComponent]
