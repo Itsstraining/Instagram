@@ -16,6 +16,9 @@ import { EffectsModule } from '@ngrx/effects';
 import { authReducer } from './reducers/auth.reducer';
 import { AuthEffect } from './effects/auth.effect';
 
+
+
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -41,6 +44,7 @@ import { AuthEffect } from './effects/auth.effect';
       AuthEffect,
     ]),
     NbDialogModule.forRoot(),
+    NbEvaIconsModule,
 
   ],
   providers: [NbDialogService],
