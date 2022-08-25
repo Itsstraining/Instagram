@@ -41,94 +41,38 @@
 
           <ng-template #dialog let-data let-ref="dialogRef">
             <nb-card>
-              <nb-card-header style="position: relative;text-align: center;font-size: 20px;">Create new Post
-                <div class="s">
-                  <button class="bt">share</button>
-                </div>
+              <nb-card-header style="padding: 0; text-align: center;">
+
+                <p style="font-weight: bold;" >Create new post</p>
               </nb-card-header>
-              <div class="dialog">
 
+              <nb-card-body style="padding: 0;">
 
-              <!-- <img class="imgs" src="https://statics.vincom.com.vn/tin-tuc-su-kien/anh_thumbnail/MicrosoftTeams-image-(766).png" alt=""> -->
-
-              <nb-card-body>
-                <div class="dialog">
-                    <div class="dialog-option">
-                      <div class="dialog-option-img">
-                        <img src="https://media.discordapp.net/attachments/1004366655054430258/1010252696655253554/unknown.png?width=396&height=434" alt="">
+                <div class="parent">
+                  <div class="left">
+                    <img class="img-create-post" src="https://media.vov.vn/sites/default/files/styles/large/public/2021-05/juneissue-korea-elle-rose-blackpink.jpeg" alt="">
+                  </div>
+                  <div class="right">
+                    <div class="right-top">
+                      <div style="display: flex; padding: 10px; gap: 10px;" >
+                        <img class="avatar" src="https://upload.wikimedia.org/wikipedia/commons/5/59/Rose_from_BLACKPINK_PUBG_210321_%28cropped%29_2.jpg" alt="">
+                        <p id="name" style="font-weight: bold;">dcong001</p>
                       </div>
-                      <div class="dialog-option-img">
-                        <img src="https://media.discordapp.net/attachments/1004366655054430258/1010252696655253554/unknown.png?width=396&height=434" alt="">
-                      </div>
-                      <div class="dialog-option-img">
-                        <img src="https://media.discordapp.net/attachments/1004366655054430258/1010252696655253554/unknown.png?width=396&height=434" alt="">
-                      </div>
-                      <div class="dialog-option-img">
-                        <img src="https://media.discordapp.net/attachments/1004366655054430258/1010252696655253554/unknown.png?width=396&height=434" alt="">
-                      </div>
-                      <div class="dialog-option-img">
-                        <img src="https://media.discordapp.net/attachments/1004366655054430258/1010252696655253554/unknown.png?width=396&height=434" alt="">
-                      </div>
-                      <div class="dialog-option-img">
-                        <img src="https://media.discordapp.net/attachments/1004366655054430258/1010252696655253554/unknown.png?width=396&height=434" alt="">
-                      </div>
-                      <div class="dialog-option-img">
-                        <img src="https://media.discordapp.net/attachments/1004366655054430258/1010252696655253554/unknown.png?width=396&height=434" alt="">
-                      </div>
-                      <div class="dialog-option-img">
-                        <img src="https://media.discordapp.net/attachments/1004366655054430258/1010252696655253554/unknown.png?width=396&height=434" alt="">
-                      </div>
-                      <div class="dialog-option-img">
-                        <img src="https://media.discordapp.net/attachments/1004366655054430258/1010252696655253554/unknown.png?width=396&height=434" alt="">
-                      </div>
-                      <div class="dialog-option-img">
-                        <img src="https://media.discordapp.net/attachments/1004366655054430258/1010252696655253554/unknown.png?width=396&height=434" alt="">
-                      </div>
-                      <div class="dialog-option-img">
-                        <img src="https://media.discordapp.net/attachments/1004366655054430258/1010252696655253554/unknown.png?width=396&height=434" alt="">
-                      </div>
-                      <div class="dialog-option-img">
-                        <img src="https://media.discordapp.net/attachments/1004366655054430258/1010252696655253554/unknown.png?width=396&height=434" alt="">
-                      </div>
-                      <div class="dialog-option-img">
-                        <img src="https://media.discordapp.net/attachments/1004366655054430258/1010252696655253554/unknown.png?width=396&height=434" alt="">
-                      </div>
-                      <div class="dialog-option-img">
-                        <img src="https://media.discordapp.net/attachments/1004366655054430258/1010252696655253554/unknown.png?width=396&height=434" alt="">
-                      </div>
-                      <div class="dialog-option-img">
-                        <img src="https://media.discordapp.net/attachments/1004366655054430258/1010252696655253554/unknown.png?width=396&height=434" alt="">
-                      </div>
-                      <div class="dialog-option-img">
-                        <img src="https://media.discordapp.net/attachments/1004366655054430258/1010252696655253554/unknown.png?width=396&height=434" alt="">
-                      </div>
-                    </div >
-                    <div class="dialog-img">
-                     <img src="https://media.discordapp.net/attachments/1004366655054430258/1010252696655253554/unknown.png?width=396&height=434" alt="">
-
                     </div>
+                    <div class="right-body">
+                      <input class="caption" type="text" name="" id="" placeholder="Write a caption...">
+                    </div>
+                    <div class="right-address">
+                      <input class="location" type="text" name="" id="" placeholder="Add location">
+                    </div>
+                  </div>
                 </div>
               </nb-card-body>
-              <!-- <nb-card-footer>
-                <button nbButton (click)="ref.close()">Close Dialog</button>
-              </nb-card-footer> -->
-              <!-- <div class="p">
-                <span style="width:20px;height:20px; border-radius: 1px solid #fafafa;">
-                <img style="width:25px;height:25px;border-radius: 100%;"
-                  src="https://static1.dienanh.net/upload/202206/e82dee6d-469f-4aa7-8c17-afeb1f1da4f0.jpg" alt="">
-              </span>
+              <nb-card-footer>
+                <button style="float: right" nbButton>SHARE POST</button>
+              </nb-card-footer>
 
 
-            </div>
-
-              <div class="name">
-                <p>Đắc_Công</p>
-              </div>
-
-              <div class="write">
-                <input type="text" placeholder="...">
-              </div> -->
-              </div>
 
 
             </nb-card>

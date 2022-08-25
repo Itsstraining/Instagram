@@ -3,6 +3,7 @@ import { CommonModule } from '@angular/common';
 
 import { ProfileRoutingModule } from './profile-routing.module';
 import { ProfileComponent } from './profile.component';
+import { NbCardModule, NbIconModule, NbTabsetModule, NbDialogModule, NbDialogService } from '@nebular/theme';
 
 
 @NgModule({
@@ -11,7 +12,13 @@ import { ProfileComponent } from './profile.component';
   ],
   imports: [
     CommonModule,
-    ProfileRoutingModule
-  ]
+    ProfileRoutingModule,
+    NbIconModule,
+    NbTabsetModule,
+    NbCardModule,
+    NbDialogModule.forRoot(),
+  ],
+  providers: [NbDialogService],
+
 })
 export class ProfileModule { }
