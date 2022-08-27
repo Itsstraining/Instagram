@@ -5,9 +5,4 @@ export interface Post{
     likes: [],
     comments:[],
     status:string,
-    
-   
-
-    
-    
 }
