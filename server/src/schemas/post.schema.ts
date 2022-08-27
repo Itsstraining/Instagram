@@ -1,7 +1,5 @@
 import {Prop,Schema,SchemaFactory} from '@nestjs/mongoose'
-import mongoose,{Document} from 'mongoose';
-
-
+import { Document } from 'mongoose';
 
 
 export type PostDocument = Post & Document;
@@ -30,9 +28,9 @@ export class Post{
         required: true,
     })
     status:string;
-  
- 
-
+    
+    @Prop()
+    image: string
 }
 export const PostSchema = SchemaFactory.createForClass(Post);
 

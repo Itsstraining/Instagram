@@ -135,6 +135,7 @@ nb-card {
 .right-body{
   border-bottom: 1px solid rgba(0, 0, 0, 0.1);
   height: 40%;
+  word-wrap: normal;
 }
 
 .name{
@@ -146,6 +147,8 @@ nb-card {
   border: none;
   outline: none;
   padding: 10px;
+  word-wrap: break-word;
+
 }
 
 .left {
