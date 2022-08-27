@@ -56,33 +56,36 @@
 
 }
 
-.home{
-  margin: 0px;
-  position: relative;
-  top: 3px;
-}
-.explore{
+.home {
   margin: 0px;
   position: relative;
   top: 3px;
 }
 
-.create{
+.explore {
   margin: 0px;
   position: relative;
   top: 3px;
 }
 
-.compass{
+.create {
   margin: 0px;
   position: relative;
   top: 3px;
 }
-.heart{
+
+.compass {
   margin: 0px;
   position: relative;
   top: 3px;
 }
+
+.heart {
+  margin: 0px;
+  position: relative;
+  top: 3px;
+}
+
 .profile-img {
   cursor: pointer;
   margin: 0px;
@@ -141,8 +144,144 @@
 
 }
 
-.ac{
-  background-color: white;
-  border-color:  aqua;
-
+.home:hover,
+.explore:hover,
+.create:hover,
+.compass:hover,
+.heart:hover,
+.profile-img:hover {
+  cursor: pointer;
 }
+
+nb-card {
+  margin: auto;
+  width: 850px;
+}
+.btn-create-stories{
+  margin: auto;
+  width: 1000px;
+  height: 830px;
+}
+.dialog{
+  justify-content: center;
+  width: 100%; 
+  // background-color: #18191a;
+  height: 730px;
+  padding: 0px;
+}
+// .dialog .dialog-option{
+//   border: 1px solid black;
+//   width: 60%;
+//   height: 100%;
+//   display: flex;
+//   flex-wrap: wrap;
+//   overflow: hidden;
+//   overflow-y: auto;
+  
+// }
+// .dialog .dialog-option::-webkit-scrollbar{
+//   display:none;
+//  }
+
+
+// .dialog-option-img{
+//   width: 100px;
+//   height: 120px;
+//   background-color: #2b2b2b;
+//   margin-left: 10px;
+//   margin-top: 10px;
+//   margin-bottom: 0px;
+// }
+// .dialog-option-img img{
+//   width: 100%;
+//   height: 100%;
+// }
+// .dialog .dialog-img{
+//   border: 1px solid black;
+//   width:40%;
+//   height: 100%;
+//   margin-left: 60px;
+//   margin-right: 60px;
+// }
+// .dialog-img img{
+//   width: 100%;
+//   height: 100%;
+// }
+
+.container{
+ 
+
+  color: #fff;
+  background-size: cover;
+  background-position: center;
+  max-width: 450px;
+  // height: 100vh;
+  height: 100%;
+
+  margin: auto;
+  position: relative;
+  padding-bottom: 50px;
+}
+#textBox{
+  
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  border: none;
+  outline: none;
+  background: transparent;
+  color: #000;
+}
+.stories-img img{
+  width: 100%;
+  height: auto;
+  ;
+  border-radius: 10px;
+}
+.stories-img{
+  width: 100%;
+  max-height: 720px;
+  
+}
+.inputFile{
+  
+    width: 0.1px;
+    height: 0.1px;
+    opacity: 0;
+    overflow: hidden;
+    position: absolute;
+    z-index: -1; 
+}
+.container label{
+  color: #fff;
+  position: relative;
+   top: 10px;
+   justify-content: center;
+   text-align: center;
+  font-size: 20px;
+  
+  
+  // border: 1px solid black;
+  // background-color: #fff;
+  
+}
+.container label:hover{
+  color: skyblue;
+}
+
+.title {
+  text-align: center;
+  font-size: 25px;
+  color: black;
+}
+.dialog svg{
+  color: #000000;
+}
+.comment {
+  display: flex;
+  width: 100%;
+}
+.comment .comment-box{
+  width: 100%;
+}
+
