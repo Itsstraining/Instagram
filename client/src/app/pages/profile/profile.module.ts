@@ -3,7 +3,11 @@ import { CommonModule } from '@angular/common';
 
 import { ProfileRoutingModule } from './profile-routing.module';
 import { ProfileComponent } from './profile.component';
+<<<<<<< HEAD
+import { AppComponent } from 'src/app/app.component';
+=======
 import { NbCardModule, NbIconModule, NbTabsetModule, NbDialogModule, NbDialogService } from '@nebular/theme';
+>>>>>>> 5f372ef5138d896132fa36c55da5783ba453c464
 
 
 @NgModule({
@@ -12,6 +16,11 @@ import { NbCardModule, NbIconModule, NbTabsetModule, NbDialogModule, NbDialogSer
   ],
   imports: [
     CommonModule,
+<<<<<<< HEAD
+    ProfileRoutingModule
+  ],
+  // providers: [AppComponent],
+=======
     ProfileRoutingModule,
     NbIconModule,
     NbTabsetModule,
@@ -20,5 +29,6 @@ import { NbCardModule, NbIconModule, NbTabsetModule, NbDialogModule, NbDialogSer
   ],
   providers: [NbDialogService],
 
+>>>>>>> 5f372ef5138d896132fa36c55da5783ba453c464
 })
 export class ProfileModule { }

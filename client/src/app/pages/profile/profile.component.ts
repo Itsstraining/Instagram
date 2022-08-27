@@ -1,6 +1,12 @@
+<<<<<<< HEAD
+import { Component, OnInit } from '@angular/core';
+import { User } from '@angular/fire/auth';
+import { AuthService } from 'src/app/services/auth.service';
+=======
 import { Component, OnInit, TemplateRef } from '@angular/core';
 import { NbDialogService } from '@nebular/theme';
 
+>>>>>>> 5f372ef5138d896132fa36c55da5783ba453c464
 
 @Component({
   selector: 'app-profile',
@@ -9,7 +15,21 @@ import { NbDialogService } from '@nebular/theme';
 })
 export class ProfileComponent implements OnInit {
 
+<<<<<<< HEAD
+  public user!: User;
+  constructor(private AuthService: AuthService) {
+    this.AuthService.user$.subscribe(user=>{
+      if(user.email){
+        console.log(user);
+        this.user=user;
+      }
+    }
+    
+    )
+  }
+=======
   constructor(private dialogService: NbDialogService) { }
+>>>>>>> 5f372ef5138d896132fa36c55da5783ba453c464
 
   ngOnInit(): void {
 

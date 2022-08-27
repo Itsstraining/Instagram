@@ -39,6 +39,11 @@
             </svg>
           </div>
 
+<<<<<<< HEAD
+        
+          <!-- (click)="open(dialog)" class="create" -->
+          <div >
+=======
           <ng-template #dialog let-data let-ref="dialogRef">
             <nb-card>
               <nb-card-header style="padding: 0; text-align: center;">
@@ -85,6 +90,7 @@
 
 
           <div (click)="open(dialog)" class="create">
+>>>>>>> 5f372ef5138d896132fa36c55da5783ba453c464
             <svg aria-label="New Post" class="_8-yf5 " color="#262626" fill="#262626" height="30" role="img"
               viewBox="0 0 48 48" width="20  ">
               <path
@@ -96,10 +102,121 @@
               </path>
             </svg>
           </div>
+       
+          <!-- <ng-template #dialog let-data let-ref="dialogRef">
+            <nb-card>
+              <nb-card-header>
+              </nb-card-header>
+              <img class="imgs" src="https://statics.vincom.com.vn/tin-tuc-su-kien/anh_thumbnail/MicrosoftTeams-image-(766).png" alt="">
+              <div class="p"><span style="width:20px;height:20px; border-radius: 1px solid #fafafa;">
+                <img style="width:25px;height:25px;border-radius: 100%;"
+                  src="https://static1.dienanh.net/upload/202206/e82dee6d-469f-4aa7-8c17-afeb1f1da4f0.jpg" alt="">
+              </span>
+            </div>
+           
 
 
+            </nb-card>
+          </ng-template> -->
 
-          <div class="compass">
+
+          <ng-template #dialog let-data let-ref="dialogRef">
+            <nb-card class="btn-create-stories">
+              <nb-card-header>
+                <div class="title">
+                  Create new Stories
+                </div>
+              </nb-card-header>
+
+
+              <nb-card-body style="padding: 0">
+                <div class="dialog">
+                    <!-- <div class="dialog-option">
+                   
+                      <div class="dialog-option-img">
+                        <img src="https://media.discordapp.net/attachments/1004366655054430258/1010252696655253554/unknown.png?width=396&height=434" alt="">
+                      </div>
+                      <div class="dialog-option-img">
+                        <img src="https://media.discordapp.net/attachments/1004366655054430258/1010252696655253554/unknown.png?width=396&height=434" alt="">
+                      </div>
+                      <div class="dialog-option-img">
+                        <img src="https://media.discordapp.net/attachments/1004366655054430258/1010252696655253554/unknown.png?width=396&height=434" alt="">
+                      </div>
+                      <div class="dialog-option-img">
+                        <img src="https://media.discordapp.net/attachments/1004366655054430258/1010252696655253554/unknown.png?width=396&height=434" alt="">
+                      </div>
+                      <div class="dialog-option-img">
+                        <img src="https://media.discordapp.net/attachments/1004366655054430258/1010252696655253554/unknown.png?width=396&height=434" alt="">
+                      </div>
+                      <div class="dialog-option-img">
+                        <img src="https://media.discordapp.net/attachments/1004366655054430258/1010252696655253554/unknown.png?width=396&height=434" alt="">
+                      </div>
+                      <div class="dialog-option-img">
+                        <img src="https://media.discordapp.net/attachments/1004366655054430258/1010252696655253554/unknown.png?width=396&height=434" alt="">
+                      </div>
+                      <div class="dialog-option-img">
+                        <img src="https://media.discordapp.net/attachments/1004366655054430258/1010252696655253554/unknown.png?width=396&height=434" alt="">
+                      </div>
+                      <div class="dialog-option-img">
+                        <img src="https://media.discordapp.net/attachments/1004366655054430258/1010252696655253554/unknown.png?width=396&height=434" alt="">
+                      </div>
+                      <div class="dialog-option-img">
+                        <img src="https://media.discordapp.net/attachments/1004366655054430258/1010252696655253554/unknown.png?width=396&height=434" alt="">
+                      </div>
+                      <div class="dialog-option-img">
+                        <img src="https://media.discordapp.net/attachments/1004366655054430258/1010252696655253554/unknown.png?width=396&height=434" alt="">
+                      </div>
+                      <div class="dialog-option-img">
+                        <img src="https://media.discordapp.net/attachments/1004366655054430258/1010252696655253554/unknown.png?width=396&height=434" alt="">
+                      </div>
+                      <div class="dialog-option-img">
+                        <img src="https://media.discordapp.net/attachments/1004366655054430258/1010252696655253554/unknown.png?width=396&height=434" alt="">
+                      </div>
+                   
+                    </div > -->        
+                      <!-- <div id="prevText"> </div>  -->
+                      
+                      <div class="container">
+                        
+                        <div class="stories-img">
+                          <img id="img-str" [src]="url" alt="">
+                        </div>
+                        <div class="comment">
+                          
+                          <div class="comment-box">
+                            <textarea id="textBox" placeholder="Add caption"></textarea>
+                          </div>
+                          <div class="comment-addFile">
+                             <input class="inputFile" type="file" name="file" id="file" (change)="onselectFile($event)">
+                            <label for="file">
+                              <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-upload" viewBox="0 0 16 16">
+                                <path d="M.5 9.9a.5.5 0 0 1 .5.5v2.5a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1v-2.5a.5.5 0 0 1 1 0v2.5a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2v-2.5a.5.5 0 0 1 .5-.5z"/>
+                                <path d="M7.646 1.146a.5.5 0 0 1 .708 0l3 3a.5.5 0 0 1-.708.708L8.5 2.707V11.5a.5.5 0 0 1-1 0V2.707L5.354 4.854a.5.5 0 1 1-.708-.708l3-3z"/>
+                              </svg>
+                            </label>
+                          </div>
+                        </div>
+                      </div>
+                
+                  
+                    <div class="dialog-img">
+                     <!-- <img src="https://media.discordapp.net/attachments/1004366655054430258/1010252696655253554/unknown.png?width=396&height=434" alt=""> -->
+                    </div>
+                </div>
+              </nb-card-body>
+              
+              
+            
+
+
+              <nb-card-footer>
+                <button nbButton (click)="ref.close()">Close Dialog</button>
+              </nb-card-footer>
+            </nb-card>
+          </ng-template>
+       
+          
+          <div class="compass"(click)="open(dialog)" >
             <svg aria-label="Find People" class="_8-yf5 " color="#262626" fill="#262626" height="30" role="img"
               viewBox="0 0 48 48" width="20">
               <path clip-rule="evenodd"
@@ -118,13 +235,17 @@
             </svg>
           </div>
 
-
-
           <div class="profile-img">
 
+<<<<<<< HEAD
+            <div routerLink="/profile"> <span style="width:20px;height:20px; border-radius: 1px solid #fafafa;">
+                <img *ngIf="user" style="width:25px;height:25px;border-radius: 100%;"
+                  [src]="user.photoURL" alt="">
+=======
             <div routerLink="/profile"><span style="width:20px;height:20px; border-radius: 1px solid #fafafa;">
                 <img style="width:25px;height:25px;border-radius: 100%;"
                   src="https://static1.dienanh.net/upload/202206/e82dee6d-469f-4aa7-8c17-afeb1f1da4f0.jpg" alt="">
+>>>>>>> 5f372ef5138d896132fa36c55da5783ba453c464
               </span>
             </div>
             <div></div>
@@ -146,3 +267,16 @@
 
 </nb-layout>
 
+<<<<<<< HEAD
+
+
+
+
+<!-- <script>
+  var textBox = document.getElementById("textBox");
+  textBox.onkeyup = textBox.onkeypress= function(){
+  document.getElementById("prevText").innerHTML = this.value;
+}
+</script> -->
+=======
+>>>>>>> 5f372ef5138d896132fa36c55da5783ba453c464
