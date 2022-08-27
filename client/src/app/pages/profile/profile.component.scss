@@ -73,14 +73,14 @@ img {
   margin-right: 3rem;
   position: relative;
   left: 250px;
-  top:-10px;
+  top: -10px;
 
 }
 
 .profile-image img {
   border-radius: 50%;
   height: 150px;
-  width:150px;
+  width: 150px;
 
 
 
@@ -97,10 +97,12 @@ img {
   left: 100px;
 
 }
-.profile-real-name{
+
+.profile-real-name {
   font-size: 1.5rem;
 }
-.profile-caption{
+
+.profile-caption {
   font-size: 1rem;
 }
 
@@ -151,36 +153,42 @@ nb-card {
   width: 1500px;
   height: 700px;
 }
-.parent{
+
+.parent {
   width: 100%;
   display: flex;
 
 
 }
-.right-top{
+
+.right-top {
   border-bottom: 1px solid rgba(0, 0, 0, 0.1);
 
 
 }
-.right-body{
+
+.right-body {
   border-bottom: 1px solid rgba(0, 0, 0, 0.1);
   height: 25%;
 }
-.right-bottom{
+
+.right-bottom {
   border-bottom: 1px solid rgba(0, 0, 0, 0.1);
   height: 13%;
 
 }
-.right-address{
+
+.right-address {
   border-bottom: 1px solid rgba(0, 0, 0, 0.1);
   height: 5%;
 }
 
-.name{
+.name {
   font-weight: bold;
 }
 
-.caption, .location{
+.caption,
+.location {
   width: 100%;
   border: none;
   outline: none;
@@ -191,22 +199,26 @@ nb-card {
   width: 60%;
   border-right: 1px solid rgba(0, 0, 0, 0.1);
 }
-.right{
+
+.right {
   width: 40%;
 }
-.avatar{
+
+.avatar {
   width: 35px;
   height: 35px;
   border-radius: 50%;
   margin: 5px;
 }
-.img-create-post{
+
+.img-create-post {
   display: block;
   margin: 0 auto;
   height: auto;
   width: 50%;
 }
-.btn{
+
+.btn {
   border: none;
   outline: none;
 }
@@ -220,7 +232,8 @@ nb-card {
   margin-top: 2.3rem;
 
 }
-.material-symbols-outlined{
+
+.material-symbols-outlined {
   width: 70px;
   font-size: 30px;
   position: absolute;
@@ -244,82 +257,82 @@ nb-card {
 
 @media screen and (max-width: 40rem) {
   .profile {
-      display: flex;
-      flex-wrap: wrap;
-      padding: 4rem 0;
+    display: flex;
+    flex-wrap: wrap;
+    padding: 4rem 0;
   }
 
   .profile::after {
-      display: none;
+    display: none;
   }
 
   .profile-image,
   .profile-user-settings,
   .profile-bio,
   .profile-stats {
-      float: none;
-      width: auto;
+    float: none;
+    width: auto;
   }
 
   .profile-image img {
-      width: 7.7rem;
+    width: 7.7rem;
 
   }
 
   .profile-user-settings {
-      flex-basis: calc(100% - 10.7rem);
-      display: flex;
-      flex-wrap: wrap;
-      margin-top: 1rem;
+    flex-basis: calc(100% - 10.7rem);
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 1rem;
   }
 
   .profile-user-name {
-      font-size: 2.2rem;
+    font-size: 2.2rem;
   }
 
   .profile-edit-btn {
-      order: 1;
-      padding: 0;
-      text-align: center;
-      margin-top: 1rem;
+    order: 1;
+    padding: 0;
+    text-align: center;
+    margin-top: 1rem;
   }
 
   .profile-edit-btn {
-      margin-left: 0;
+    margin-left: 0;
   }
 
   .profile-bio {
-      font-size: 1.4rem;
-      margin-top: 1.5rem;
+    font-size: 1.4rem;
+    margin-top: 1.5rem;
   }
 
   .profile-edit-btn,
   .profile-bio,
   .profile-stats {
-      flex-basis: 100%;
+    flex-basis: 100%;
   }
 
   .profile-stats {
-      order: 1;
-      margin-top: 1.5rem;
+    order: 1;
+    margin-top: 1.5rem;
 
 
   }
 
   .profile-stats ul {
-      display: flex;
-      text-align: center;
-      padding: 1.2rem 0;
-      border-top: 0.1rem solid #dadada;
-      border-bottom: 0.1rem solid #dadada;
+    display: flex;
+    text-align: center;
+    padding: 1.2rem 0;
+    border-top: 0.1rem solid #dadada;
+    border-bottom: 0.1rem solid #dadada;
 
 
   }
 
   .profile-stats li {
-      font-size: 1.4rem;
-      flex: 1;
-      margin: 0;
+    font-size: 1.4rem;
+    flex: 1;
+    margin: 0;
 
   }
 
@@ -332,7 +345,7 @@ nb-card {
 
 @keyframes loader {
   to {
-      transform: rotate(360deg);
+    transform: rotate(360deg);
   }
 }
 
@@ -340,15 +353,15 @@ nb-card {
 
 @supports (display: grid) {
   .profile {
-      display: grid;
-      grid-template-columns: 1fr 2fr;
-      grid-template-rows: repeat(3, auto);
-      grid-column-gap: 3rem;
-      align-items: center;
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    grid-template-rows: repeat(3, auto);
+    grid-column-gap: 3rem;
+    align-items: center;
   }
 
   .profile-image {
-      grid-row: 1 / -1;
+    grid-row: 1 / -1;
   }
 
 
@@ -359,44 +372,44 @@ nb-card {
   .profile-bio,
   .gallery-item,
   .gallery {
-      width: auto;
-      margin: 0;
+    width: auto;
+    margin: 0;
   }
 
   @media (max-width: 40rem) {
-      .profile {
-          grid-template-columns: auto 1fr;
-          grid-row-gap: 1.5rem;
-      }
+    .profile {
+      grid-template-columns: auto 1fr;
+      grid-row-gap: 1.5rem;
+    }
 
-      .profile-image {
-          grid-row: 1 / 2;
-      }
+    .profile-image {
+      grid-row: 1 / 2;
+    }
 
-      .profile-user-settings {
-          display: grid;
-          grid-template-columns: auto 1fr;
-          grid-gap: 1rem;
-      }
+    .profile-user-settings {
+      display: grid;
+      grid-template-columns: auto 1fr;
+      grid-gap: 1rem;
+    }
 
-      .profile-edit-btn,
-      .profile-stats,
-      .profile-bio {
-          grid-column: 1 / -1;
-      }
+    .profile-edit-btn,
+    .profile-stats,
+    .profile-bio {
+      grid-column: 1 / -1;
+    }
 
-      .profile-user-settings,
-      .profile-edit-btn,
-      .profile-settings-btn,
-      .profile-bio,
-      .profile-stats {
-          margin: 0;
-      }
+    .profile-user-settings,
+    .profile-edit-btn,
+    .profile-settings-btn,
+    .profile-bio,
+    .profile-stats {
+      margin: 0;
+    }
   }
 }
 
 
-.main{
+.main {
   width: 100%;
   justify-content: center;
   background-color: white;
@@ -406,7 +419,8 @@ nb-card {
 
 img {
 
-  width: 60; /* need to overwrite inline dimensions */
+  width: 60;
+  /* need to overwrite inline dimensions */
   height: 100%;
 }
 
@@ -415,7 +429,7 @@ img {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
   grid-gap: 2em;
-  width:70%;
+  width: 70%;
   padding-top: 70px;
 
 
@@ -456,8 +470,8 @@ img {
   left: 0;
   opacity: 0;
   transition: opacity .5s;
-  background: rgba(46, 45, 45, 0.2 );
-  color: white ;
+  background: rgba(46, 45, 45, 0.2);
+  color: white;
 
 
   /* position the text in t’ middle*/
@@ -471,17 +485,15 @@ img {
   opacity: 1;
 }
 
-.location-listing:hover .location-image img
-{
+.location-listing:hover .location-image img {
   filter: blur(2px);
 
 }
-.tab{
+
+.tab {
   padding-left: 600px;
   position: relative;
-  top:80px
-
-
+  top: 80px
 }
 
 
@@ -493,10 +505,8 @@ img {
   .location-title {
     opacity: 1;
   }
+
   .location-image img {
     filter: blur(2px);
   }
 }
-
-
-

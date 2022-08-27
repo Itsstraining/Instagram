@@ -15,15 +15,9 @@ import { StoreModule } from '@ngrx/store';
 import { EffectsModule } from '@ngrx/effects';
 import { authReducer } from './reducers/auth.reducer';
 import { AuthEffect } from './effects/auth.effect';
-<<<<<<< HEAD
 import { CreatePostComponent } from './components/create-post/create-post.component';
 import { HttpClientModule } from '@angular/common/http';
-=======
 
-
-
-
->>>>>>> 5f372ef5138d896132fa36c55da5783ba453c464
 @NgModule({
   declarations: [
     AppComponent,
