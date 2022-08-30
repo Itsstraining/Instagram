@@ -6,24 +6,19 @@ import { AnimalModule } from './modules/animal/animal.module';
 import { join } from 'path';
 import { ServeStaticModule } from '@nestjs/serve-static'
 import { AuthMiddleware } from './middlewares/auth.middleware';
-
-import { PostModule } from './modules/post/post.module';
 import { UserModule } from './modules/user/user.module';
-import { UserService } from './services/user/user.service';
-import { UserController } from './controllers/user/user.controller';
-import { NewpostController } from './controllers/newpost/newpost.controller';
+import { StoriesModule } from './modules/stories/stories.module';
 @Module({
   imports: [
     ServeStaticModule.forRoot({
       rootPath: join(__dirname, '..', 'public'),
     }),
     AnimalModule,
-    // PostModule,
-    MongooseModule.forRoot("mongodb+srv://congpham:123@cluster0.e3gxoqz.mongodb.net/?retryWrites=true&w=majority"),
+    MongooseModule.forRoot("mongodb+srv://congpham:123@cluster0.e3gxoqz.mongodb.net/instagram?retryWrites=true&w=majority"),
     UserModule,
-
+    StoriesModule
   ],
-  controllers: [AppController, NewpostController],
+  controllers: [AppController],
   providers: [AppService],
 })
 export class AppModule implements NestModule {
