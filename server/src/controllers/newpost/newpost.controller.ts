@@ -1,4 +1,4 @@
-import { Body, Controller, Get, Post,  } from '@nestjs/common';
+import { Body, Controller, Get, Post, Query,  } from '@nestjs/common';
 import { NewPost } from 'src/schemas/newpost.schema';
 import { NewPostService } from '../../services/newpost/newpost.service'
 
@@ -9,6 +9,11 @@ export class NewPostController {
     @Get('/All')
     public async getAll(){
         return await this.NewPostService.findAll();
+    }
+    @Get("/id")
+    public async getPostById(@Query("id")id :string){
+        return await this.NewPostService.findById(id);
+
     }
 
     @Post('/')

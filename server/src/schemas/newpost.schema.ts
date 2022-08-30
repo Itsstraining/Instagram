@@ -17,6 +17,16 @@ export class NewPost {
         required: true
     })
     photoURL: string; 
+    @Prop({
+        required: true
+    })
+    like: [];
+    @Prop({
+        required: true
+    })
+    comment: [];  
+
+
   
    
 

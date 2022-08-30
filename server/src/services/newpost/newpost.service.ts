@@ -10,6 +10,10 @@ export class NewPostService {
   async findAll(){
     return await this.newpostModel.find().exec();
   }  
+  async findById(id: string){
+    return await this.newpostModel.findById(id).exec();
+  }
+
 
     
   async createNewPost(newpost: NewPost){
