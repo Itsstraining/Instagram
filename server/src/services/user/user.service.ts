@@ -12,4 +12,10 @@ export class UserService {
     async getUsers(){
         return await this.userModel.find();
     }
+
+    async createUser(user:any){
+        const newUser = new this.userModel(user);
+        return await newUser.save()
+    }
 }
+

@@ -7,7 +7,6 @@ export class AnimalController {
 
     
 
-
     @Get('get-all')
     async getAnimals() {
         return await this.animalService.getAnimals();

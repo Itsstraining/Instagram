@@ -2,7 +2,7 @@
   width: 100%;
   padding: 40px 0;
   display: flex;
-  justify-content: center;
+  justify-content:  center;
   margin-top: 0px;
 }
 .warpper{
@@ -112,6 +112,9 @@
   display: flex;
   align-items: centers;
 }
+.user{
+  padding-left: 14px;
+}
 .info.profile-pic{
  height: 40px;
  width: 40px;
@@ -159,6 +162,10 @@
 
 .comment-wrapper .icon{
   height: 30px;
+  margin-left: 20px;
+}
+.icon{
+  
 }
 .comment-box{
   width: 80%;
@@ -176,8 +183,10 @@
   outline: none;
   text-transform: capitalize;
   font-size: 16px;
-  color: rgb(0,162,255);
+  // color: rgb(0,162,255);
+  color: #0095f6;
   opacity: 0.5;
+  
 }
 .reaction-wrapper{
   width: 100%;
@@ -225,6 +234,8 @@
   font-size: 14px;
   color: #000;
   margin-top: 10px;
+  width: 200px;
+  text-align: left;
   
 }
 

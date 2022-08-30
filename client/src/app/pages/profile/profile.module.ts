@@ -3,6 +3,7 @@ import { CommonModule } from '@angular/common';
 
 import { ProfileRoutingModule } from './profile-routing.module';
 import { ProfileComponent } from './profile.component';
+import { AppComponent } from 'src/app/app.component';
 import { NbCardModule, NbIconModule, NbTabsetModule, NbDialogModule, NbDialogService } from '@nebular/theme';
 
 
