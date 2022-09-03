@@ -1,0 +1,20 @@
+<app-loader *ngIf="!isLoading"></app-loader>
+<div *ngIf="isLoading" class="body">
+    <main>
+
+        <div class="container">
+
+            <div class="gallery">
+
+                <div *ngFor="let post of posts" class="gallery-item" tabindex="0">
+
+                    <img [src]="post.image" class="gallery-image" alt="">
+
+                    <div class="gallery-item-info">
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </main>
+</div>
