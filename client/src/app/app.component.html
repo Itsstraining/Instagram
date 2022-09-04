@@ -111,7 +111,7 @@
                   src="https://static1.dienanh.net/upload/202206/e82dee6d-469f-4aa7-8c17-afeb1f1da4f0.jpg" alt="">
               </span>
             </div>
-           
+
 
 
             </nb-card>
@@ -130,7 +130,7 @@
               <nb-card-body style="padding: 0">
                 <div class="dialog">
                   <!-- <div class="dialog-option">
-                   
+
                       <div class="dialog-option-img">
                         <img src="https://media.discordapp.net/attachments/1004366655054430258/1010252696655253554/unknown.png?width=396&height=434" alt="">
                       </div>
@@ -170,7 +170,7 @@
                       <div class="dialog-option-img">
                         <img src="https://media.discordapp.net/attachments/1004366655054430258/1010252696655253554/unknown.png?width=396&height=434" alt="">
                       </div>
-                   
+
                     </div > -->
                   <!-- <div id="prevText"> </div>  -->
 
@@ -239,7 +239,7 @@
           <div class="profile-img">
 
             <div routerLink="/profile"><span style="width:20px;height:20px; border-radius: 1px solid #fafafa;">
-                <img style="width:25px;height:25px;border-radius: 100%;" [src]="user.photoURL" alt="">
+                <img *ngIf="user" style="width:25px;height:25px;border-radius: 100%;" [src]="user.photoURL" alt="">
               </span>
             </div>
             <div></div>

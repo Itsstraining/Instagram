@@ -9,6 +9,7 @@ import { AuthMiddleware } from './middlewares/auth.middleware';
 import { UserModule } from './modules/user/user.module';
 import { StoriesModule } from './modules/stories/stories.module';
 import { NewPostModule } from './modules/newpost/newpost.module';
+
 @Module({
   imports: [
     ServeStaticModule.forRoot({
@@ -18,7 +19,8 @@ import { NewPostModule } from './modules/newpost/newpost.module';
     MongooseModule.forRoot("mongodb+srv://congpham:123@cluster0.e3gxoqz.mongodb.net/instagram?retryWrites=true&w=majority"),
     UserModule,
     StoriesModule,
-    NewPostModule
+    NewPostModule,
+  
   ],
   controllers: [AppController],
   providers: [AppService],

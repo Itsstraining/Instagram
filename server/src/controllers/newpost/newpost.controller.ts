@@ -2,11 +2,11 @@ import { Body, Controller, Get, Post, Query,  } from '@nestjs/common';
 import { NewPost } from 'src/schemas/newpost.schema';
 import { NewPostService } from '../../services/newpost/newpost.service'
 
-@Controller('newpost')
+@Controller('post')
 export class NewPostController {
     constructor(private NewPostService:NewPostService){}
 
-    @Get('/All')
+    @Get('/all')
     public async getAll(){
         return await this.NewPostService.findAll();
     }

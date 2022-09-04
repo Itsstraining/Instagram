@@ -1,5 +1,5 @@
 import { Prop, Schema, SchemaFactory } from '@nestjs/mongoose';
-import { Document } from 'mongoose';
+import mongoose, { Document } from 'mongoose';
 
 export type NewPostDocument = NewPost & Document;
 
@@ -7,6 +7,7 @@ export type NewPostDocument = NewPost & Document;
     timestamps: true,
 })
 export class NewPost {
+    
 
     @Prop({
         required: true
@@ -18,13 +19,22 @@ export class NewPost {
     })
     photoURL: string; 
     @Prop({
-        required: true
+        default: Array
     })
     like: [];
     @Prop({
-        required: true
+        default: Array
     })
     comment: [];  
+    @Prop(
+        {
+            type: mongoose.Schema.Types.ObjectId,
+            ref:'users'
+        }
+    )
+    userId: string;
+
+    
 
 
   

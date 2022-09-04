@@ -47,6 +47,7 @@ import { HttpClientModule } from '@angular/common/http';
     ]),
     NbDialogModule.forRoot(),
     NbEvaIconsModule,
+    HttpClientModule,
 
   ],
   providers: [NbDialogService],
