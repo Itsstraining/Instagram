@@ -12,4 +12,8 @@ export class UserService {
   registerUser(user: User) {
     return this.http.post(URL + "user/register", user);
   }
+
+  getProfile(email: string) {
+    return this.http.get(URL + `user/profile/${email}`);
+  }
 }

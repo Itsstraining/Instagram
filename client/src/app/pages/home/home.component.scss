@@ -1,11 +1,12 @@
-.main{
+.main {
   width: 100%;
   padding: 40px 0;
   display: flex;
-  justify-content:  center;
+  justify-content: center;
   margin-top: 0px;
 }
-.warpper{
+
+.warpper {
   width: 70%;
   max-width: 1000px;
   display: grid;
@@ -13,80 +14,88 @@
   grid-gap: 30px;
 
 }
-.left-col{
+
+.left-col {
   display: flex;
   flex-direction: column;
-}
-.status-warpper{
-  width: 100%;
-  height: 150px;
-  background-color: #fff;
-  border-radius: 2px;
-  padding: 10px;
-  padding-right: 0;
-  display: flex;
-  align-items: center;
-  overflow: hidden;
-  overflow-x: auto;
-  border-radius: 10px ;
-  border: 1px solid #dfdfdf;
-}
-.status-warpper::-webkit-scrollbar{
- display: none;
 }
 
-.status-card{
-  flex: 0 0 auto;
-  width: 80px;
-  max-width: 80px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  margin-right: 15px;
+// .status-warpper {
+//   width: 100%;
+//   height: 150px;
+//   background-color: #fff;
+//   border-radius: 2px;
+//   padding: 10px;
+//   padding-right: 0;
+//   display: flex;
+//   align-items: center;
+//   overflow: hidden;
+//   overflow-x: auto;
+//   border-radius: 10px;
+//   border: 1px solid #dfdfdf;
+// }
+
+.status-warpper::-webkit-scrollbar {
+  display: none;
 }
+
+// .status-card {
+//   flex: 0 0 auto;
+//   width: 80px;
+//   max-width: 80px;
+//   display: flex;
+//   flex-direction: column;
+//   align-items: center;
+//   margin-right: 15px;
+// }
+
 .profile-pic {
-  width: 70px;
-  height: 70px;
+  width: 50px;
+  height: 50px;
   border-radius: 50%;
-  
+
   padding: 3px;
-  background: linear-gradient(45, rgb(255, 230, 0),rgb(225, 0, 128) 80%);
+  background: linear-gradient(45, rgb(255, 230, 0), rgb(225, 0, 128) 80%);
 }
-.profile-pic img{
+
+.profile-pic img {
   width: 100%;
   height: 100%;
   object-fit: cover;
   border-radius: 50%;
-  // border: 2px solid #fff;
-  
 }
+
 .profile-pic {
   background:
-  radial-gradient(rgba(0,0,0,0.15)60%, transparent 0),
-  radial-gradient(white 65%,transparent 0),
-  linear-gradient(to top right, orange, deeppink);
+    radial-gradient(rgba(0, 0, 0, 0.15)60%, transparent 0),
+    radial-gradient(white 65%, transparent 0),
+    linear-gradient(to top right, orange, deeppink);
 }
-.name{
+
+.name {
   width: 100%;
   overflow: hidden;
   text-align: center;
   font-size: 12px;
   margin-top: 10px;
   margin-bottom: 0;
-  color: rgba(0,0,0,0.5);
+  color: rgba(0, 0, 0, 0.5);
 }
+
 // img{
 // width: 70px;
 // height: 70px;
 // }
-.post{
-  width: 100%;
+.post {
+  width: 90%;
   height: auto;
   background: #fff;
   border: 1px solid #dfdfdf;
   margin-top: 40px;
   border-radius: 10px;
+  display: block;
 }
+
 .info {
   width: 100%;
   height: 60px;
@@ -97,61 +106,71 @@
   margin-bottom: 10px;
 }
 
-.info .name{
+.info .name {
   width: auto;
   font-weight: bold;
   color: #000;
   font-size: 14px;
-    margin-left: 10px;
+  margin-left: 10px;
 }
-.info .options{
+
+.info .options {
   height: 100px;
   cursor: pointer;
 }
-.info .user{
+
+.info .user {
   display: flex;
   align-items: centers;
 }
-.user{
+
+.user {
   padding-left: 14px;
 }
-.info.profile-pic{
- height: 40px;
- width: 40px;
- padding: 0; 
- background: none;
- display: flex;
+
+.info.profile-pic {
+  height: 40px;
+  width: 40px;
+  padding: 0;
+  background: none;
+  display: flex;
 }
 
 
 
-.post-image{
+.post-image {
   width: 100%;
   height: 500px;
   object-fit: cover;
 }
 
-.post-content{
+.post-content {
   width: 100%;
-  padding: 20px;
+  padding: 20px 20px 10px 20px;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
 }
-.likes{
+
+.likes {
   font-weight: bold;
 }
-.description{
+
+.description {
   margin: 10px 0;
   font-size: 14px;
   line-height: 20px;
 }
-.description span{
+
+.description span {
   font-weight: bold;
   margin-right: 10px;
 }
-.post-time{
-  color: rgba(0,0,0,0.5);
+
+.post-time {
+  color: rgba(0, 0, 0, 0.5);
   font-size: 12px;
 }
-.comment-wrapper{
+
+.comment-wrapper {
   width: 100%;
   height: 50px;
   border-radius: 1px solid #dfdfdf;
@@ -160,22 +179,23 @@
   align-items: center;
 }
 
-.comment-wrapper .icon{
+.comment-wrapper .icon {
   height: 30px;
   margin-left: 20px;
 }
-.icon{
-  
-}
-.comment-box{
+
+.icon {}
+
+.comment-box {
   width: 80%;
   height: 100%;
   border: none;
   outline: none;
   font-size: 14px;
 }
+
 .comment-btn,
- .switch-btn{
+.switch-btn {
   width: 20%;
   height: 100%;
   background: none;
@@ -184,11 +204,12 @@
   text-transform: capitalize;
   font-size: 16px;
   // color: rgb(0,162,255);
-  color: #0095f6;
+  color: #003cffed;
   opacity: 0.5;
-  
+
 }
-.reaction-wrapper{
+
+.reaction-wrapper {
   width: 100%;
   height: 50px;
   display: flex;
@@ -196,16 +217,17 @@
   align-items: center;
 }
 
-.reaction-wrapper .icon{
+.reaction-wrapper .icon {
   height: 25px;
   margin: 0;
   margin-right: 20px;
 }
-.reaction-wrapper .icon-save{
+
+.reaction-wrapper .icon-save {
   margin-left: auto;
 }
 
-.profile-card{
+.profile-card {
   // width: fit-content;
   width: 100%;
   display: flex;
@@ -213,7 +235,8 @@
   align-items: center;
   margin-bottom: 10px;
 }
-.profile-card .profile-pic{
+
+.profile-card .profile-pic {
   flex: 0 0 auto;
   padding: 0;
   background: none;
@@ -221,33 +244,35 @@
   height: 40px;
   margin-right: 10px;
 }
-.profile-card:first-child .profile-pic{
+
+.profile-card:first-child .profile-pic {
   width: 70px;
   height: 70px;
 }
-.profile-card .profile-pic{
+
+.profile-card .profile-pic {
   border: none;
 }
 
-.profile-card .name{
+.profile-card .name {
   font-weight: 500;
   font-size: 14px;
   color: #000;
   margin-top: 10px;
   width: 200px;
   text-align: left;
-  
+
 }
 
-.sub-text{
-  color: rgba(0,0,0,0.5);
+.sub-text {
+  color: rgba(0, 0, 0, 0.5);
   font-size: 12px;
   font-weight: 500;
   margin-top: 0px;
-  margin-bottom: 5px; 
+  margin-bottom: 5px;
 }
 
-.switch-btn{
+.switch-btn {
   opacity: 1;
   font-weight: 700;
   font-size: 12px;
@@ -255,9 +280,10 @@
   width: 100%;
 
 }
-.suggestion-text{
+
+.suggestion-text {
   font-size: 14px;
-  color: rgba(0,0,0,0.5);
+  color: rgba(0, 0, 0, 0.5);
   font-weight: 700;
   margin: 20px 0;
 }
@@ -272,14 +298,27 @@
 //   height: 74px;
 // }
 
-@media(max-width:1100px){
-  .right-col, .search-box{
+@media(max-width:1100px) {
+
+  .right-col,
+  .search-box {
     display: none;
   }
-  .warpper{
+
+  .warpper {
     width: 90%;
   }
-  .warpper{
+
+  .warpper {
     display: block;
   }
+}
+
+.emojis {
+  display: flex;
+  gap: 0.5rem;
+}
+
+nb-icon:hover {
+  cursor: pointer;
 }

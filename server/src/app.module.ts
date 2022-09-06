@@ -8,6 +8,7 @@ import { ServeStaticModule } from '@nestjs/serve-static'
 import { AuthMiddleware } from './middlewares/auth.middleware';
 import { UserModule } from './modules/user/user.module';
 import { StoriesModule } from './modules/stories/stories.module';
+import { PostModule } from './modules/post/post.module';
 @Module({
   imports: [
     ServeStaticModule.forRoot({
@@ -16,7 +17,8 @@ import { StoriesModule } from './modules/stories/stories.module';
     AnimalModule,
     MongooseModule.forRoot("mongodb://localhost:3001/instagram"),
     UserModule,
-    StoriesModule
+    StoriesModule,
+    PostModule,
   ],
   controllers: [AppController],
   providers: [AppService],
@@ -25,8 +27,13 @@ export class AppModule implements NestModule {
   configure(consumer: MiddlewareConsumer) {
     consumer
       .apply(AuthMiddleware)
-      .forRoutes({
-        path: 'animal/example', method: RequestMethod.GET
-      });
+      .forRoutes(
+        {
+          path: 'animal/example', method: RequestMethod.GET,
+        },
+        {
+          path: 'post/create', method: RequestMethod.POST,
+        }
+      );
   }
 }

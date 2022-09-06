@@ -13,7 +13,7 @@ export class AuthMiddleware implements NestMiddleware {
     const token = bearerToken[1];
 
     try {
-      let userVerify = admin.app().auth().verifyIdToken(token);
+      let userVerify = await admin.app().auth().verifyIdToken(token);
       req.payload = userVerify;
       next();
     } catch (error) {
