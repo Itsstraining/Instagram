@@ -3,6 +3,7 @@ export interface NewPost {
     name: string,
     content:string,
     photoURL: string,
+    userId: string,
     like: [],
     comment: [],
     
