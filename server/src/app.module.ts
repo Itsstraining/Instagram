@@ -15,7 +15,8 @@ import { PostModule } from './modules/post/post.module';
       rootPath: join(__dirname, '..', 'public'),
     }),
     AnimalModule,
-    MongooseModule.forRoot("mongodb://localhost:3001/instagram"),
+    // MongooseModule.forRoot("mongodb://localhost:3001/instagram"),
+    MongooseModule.forRoot("mongodb+srv://admin:admin@cluster0.mvebh.mongodb.net/iYahuu?retryWrites=true&w=majoritycluster0.mvebh.mongodb.net"),
     UserModule,
     StoriesModule,
     PostModule,
@@ -47,3 +48,5 @@ export class AppModule implements NestModule {
       );
   }
 }
+
+

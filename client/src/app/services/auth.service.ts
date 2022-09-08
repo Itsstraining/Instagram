@@ -3,19 +3,21 @@ import { Auth, User } from '@angular/fire/auth';
 import { GoogleAuthProvider, signInWithPopup, onAuthStateChanged, signInWithEmailAndPassword, createUserWithEmailAndPassword } from '@firebase/auth';
 import { BehaviorSubject, from } from 'rxjs';
 import { UserService } from './user.service';
-
+import { Router } from '@angular/router';
 @Injectable({
   providedIn: 'root'
 })
 export class AuthService {
 
-  constructor(private auth: Auth, private UserService: UserService) {
+  constructor(private auth: Auth, private UserService: UserService, private Router: Router) {
     onAuthStateChanged(this.auth, (user) => {
       if (user) {
         this.UserService.registerUser(user).subscribe(res => {
           // console.log(res);
         });
         this.user$.next(user);
+        this.Router.navigate(['/home']);
+
       }
     })
   }

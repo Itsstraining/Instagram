@@ -4,6 +4,7 @@ import { Model } from 'mongoose';
 import { Post } from 'src/schemas/post.schema';
 import { User, UserDocument } from 'src/schemas/user.schema';
 
+
 @Injectable()
 export class UserService {
     constructor(
@@ -78,17 +79,8 @@ export class UserService {
 
     async follow(userId: string, followId: string) {
         try {
-            // const user:any = await this.userModel.findById(userId);
-            // const follow:any = await this.userModel.findById(followId);
-            // if (!user || !follow) {
-            //     throw new HttpException('User is not exits', HttpStatus.BAD_REQUEST);
-            // }
-            // user.following.push(followId);
-            // follow.followers.push(userId);
-            // await user.save();
-            // await follow.save();
 
-            Promise.all([this.userModel.findOneAndUpdate({
+            await Promise.all([this.userModel.findOneAndUpdate({
                 email: userId
             }, {
                 $push: {
@@ -132,3 +124,4 @@ export class UserService {
 
 
 }
+

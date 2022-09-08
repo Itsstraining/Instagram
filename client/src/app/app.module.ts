@@ -53,6 +53,7 @@ import { SearchComponent } from './components/search/search.component';
       AuthEffect,
     ]),
     NbEvaIconsModule,
+    HttpClientModule,
 
   ],
   providers: [NbDialogService],
