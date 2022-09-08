@@ -54,6 +54,7 @@ import { SearchComponent } from './components/search/search.component';
     ]),
     NbDialogModule.forRoot(),
     NbEvaIconsModule,
+    HttpClientModule,
 
   ],
   providers: [NbDialogService],

@@ -4,6 +4,7 @@ import { Model } from 'mongoose';
 import { Post } from 'src/schemas/post.schema';
 import { User, UserDocument } from 'src/schemas/user.schema';
 
+
 @Injectable()
 export class UserService {
     constructor(
@@ -132,3 +133,4 @@ export class UserService {
 
 
 }
+

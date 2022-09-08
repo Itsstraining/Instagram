@@ -54,7 +54,7 @@
                     <img [src]="user.photoURL" alt="">
                 </div>
                 <div>
-                    <p class="name">{{user.displayName}}</p>
+                    <p *ngIf="user" class="name">{{user.displayName}}</p>
                     <p class="sub-text"></p>
                 </div>
                 <button class="switch-btn">switch</button>
