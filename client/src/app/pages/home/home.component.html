@@ -4,8 +4,7 @@
             <div style="width: 90%;">
                 <app-story></app-story>
             </div>
-            <span *ngFor="let post of posts">
-
+            <span style="width: 90%;" *ngFor="let post of posts">
                 <div class="post">
                     <div class="info">
                         <div class="user">
@@ -46,12 +45,44 @@
                     </div>
                 </div>
             </span>
+            <div *ngIf="posts.length === 0">
+                <div class="post">
+                    <div class="info">
+                        <div class="user">
+                            <div class="profile-pic">
+                                <img src="https://scontent.xx.fbcdn.net/v/t1.15752-9/301983833_2269705766572445_4694845526974548306_n.png?_nc_cat=110&ccb=1-7&_nc_sid=aee45a&_nc_ohc=f-z1McoWhLsAX-oHHHd&_nc_ad=z-m&_nc_cid=0&_nc_ht=scontent.xx&oh=03_AVJ1j-Z563DDuPQQhF3ZZANvrMVgmTxf6eQRRtToNEJW7w&oe=633FEDB0"
+                                    alt="">
+                            </div>
+                            <p class="name">iYahuu</p>
+                        </div>
+                    </div>
+                    <img class="post-image"
+                        src="https://img.freepik.com/premium-vector/colorful-hand-drawn-welcome-landing-page_23-2148274061.jpg?w=2000"
+                        alt="">
+                    <div class="post-content">
+                        <span>
+                            <p class="description">
 
+                                <span>iYahuu</span>
+                                iYahuu xin chào bạn, theo dõi thêm nhiều bạn bè để thấy được nhiều hình ảnh hơn nhé!
+                            </p>
+                        </span>
+
+                        <p class="post-time">{{currentDay | date: "medium"}}</p>
+                    </div>
+
+                    <div class="comment-wrapper">
+                        <nb-icon style="margin-left: 10px;" nbTooltip="Emoji" icon="smiling-face-outline"></nb-icon>
+                        <input style="margin-left: 5px;" type="text" class="comment-box" placeholder="Add a comment">
+                        <button class="comment-btn">post</button>
+                    </div>
+                </div>
+            </div>
         </div>
         <div class="right-col">
             <div *ngIf="user" class="profile-card">
                 <div style="width: 60px; height: 60px;" class="profile-pic">
-                    <img [src]="user.photoURL" alt="">
+                    <img (error)="onImageError($event)" [src]="user.photoURL" alt="">
                 </div>
                 <div>
                     <p class="name">{{user.displayName}}</p>

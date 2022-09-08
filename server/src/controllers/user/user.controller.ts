@@ -8,12 +8,23 @@ export class UserController {
 
     @Post('register')
     createUser(@Body() user: any) {
+
         const _user: User = {
             displayName: user.displayName,
             email: user.email,
             photoURL: user.photoURL,
         }
+
+        if (user.displayName == null || user.displayName == "") {
+            _user.displayName = this.refillDisplayName(user.email);
+        }
+
         return this.UserService.createUser(_user);
+    }
+
+    refillDisplayName(email: string) {
+        let arr = email.split("@");
+        return arr[0];
     }
 
     @Get('profile/:email')

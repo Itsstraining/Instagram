@@ -11,9 +11,12 @@
     <div class="panel login">
       <p class="title">Yahuu</p>
       <form style="margin: 40px">
-        <input class="input-box" type="text" name="username" required placeholder="Phone number, username, or email">
-        <input class="input-box" type="password" name="password" required placeholder="Password">
-        <input class="button" type="submit" name="login" value="Log In">
+        <input [(ngModel)]="account.email" class="input-box" type="text" name="username" required
+          placeholder="Phone number, username, or email">
+        <input [(ngModel)]="account.password" class="input-box" type="password" name="password" required
+          placeholder="Password">
+        <input (click)="loginWithEmail()" style="background-color: #0095f6;" class="button" type="submit" name="login"
+          value="Log In">
         <div class="divider">
           <div class="line"></div>
           <p>OR</p>
@@ -25,7 +28,7 @@
     </div>
     <div class="panel signup">
       <p>Don't have an account?</p>
-      <a href=#>Sign up</a>
+      <a routerLink="/register">Sign up</a>
     </div>
     <div class="apps">
     </div>

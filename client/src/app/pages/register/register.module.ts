@@ -3,6 +3,8 @@ import { CommonModule } from '@angular/common';
 
 import { RegisterRoutingModule } from './register-routing.module';
 import { RegisterComponent } from './register.component';
+import { FormsModule } from '@angular/forms';
+import { NbButtonModule, NbCardModule, NbDialogModule, NbToastrModule } from '@nebular/theme';
 
 
 @NgModule({
@@ -11,7 +13,12 @@ import { RegisterComponent } from './register.component';
   ],
   imports: [
     CommonModule,
-    RegisterRoutingModule
+    RegisterRoutingModule,
+    FormsModule,
+    NbCardModule,
+    NbButtonModule,
+    NbDialogModule.forRoot(),
+    NbToastrModule.forRoot(),
   ]
 })
 export class RegisterModule { }

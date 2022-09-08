@@ -8,6 +8,7 @@ import { NbCardModule, NbIconModule, NbTabsetModule, NbDialogModule, NbDialogSer
 import { LoaderComponent } from 'src/app/components/loader/loader.component';
 import { ListPostComponent } from './list-post/list-post.component';
 import { InfoProfileComponent } from './info-profile/info-profile.component';
+import { DetailComponent } from './detail/detail.component';
 
 
 @NgModule({
@@ -15,7 +16,8 @@ import { InfoProfileComponent } from './info-profile/info-profile.component';
     ProfileComponent,
     LoaderComponent,
     ListPostComponent,
-    InfoProfileComponent
+    InfoProfileComponent,
+    DetailComponent
   ],
   imports: [
     CommonModule,

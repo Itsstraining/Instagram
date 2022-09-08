@@ -1,12 +1,11 @@
 <nb-layout>
-
-  <nb-layout-header fixed>
-    <nav *ngIf="user" class="nav">
+  <nb-layout-header *ngIf="user" fixed>
+    <nav class="nav">
 
       <div class="wrapper">
 
         <div class="logo" style="padding-top: 8px;padding-right: 20px;">
-          <a nbTooltip="Trang chủ" class="no-underline" routerLink="/">
+          <a nbTooltip="Trang chủ" class="no-underline" routerLink="/home">
             Yahuu
           </a>
         </div>
@@ -143,13 +142,19 @@
             </svg>
           </div>
 
-          <div nbTooltip="Hồ sơ" class="profile-img">
-            <div *ngIf="user" [routerLink]="['/iyahuu/' + user.email]"><span
-                style="width:20px;height:20px; border-radius: 1px solid #fafafa;">
-                <img style="width:25px;height:25px;border-radius: 100%;" [src]="user.photoURL" alt="">
+          <div class="profile-img">
+            <div *ngIf="user"><span style="width:20px;height:20px; border-radius: 1px solid #fafafa;">
+                <div class="dropdown">
+                  <img style="width:25px;height:25px;border-radius: 100%;" (error)="onImageError($event)"
+                    [src]="user.photoURL" alt="">
+                  <div class="dropdown-content">
+                    <p [routerLink]="['/iyahuu/' + user.email]">Hồ sơ</p>
+                    <p (click)="signOut()">Đăng xuất</p>
+                  </div>
+                </div>
+
               </span>
             </div>
-
           </div>
 
         </div>

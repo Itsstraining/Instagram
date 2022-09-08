@@ -24,7 +24,10 @@ export class HomeComponent implements OnInit {
   ) {
     this.AuthService.user$.subscribe((user: any) => {
       if (user.email) {
-        this.user = user
+        this.user = user;
+        if (user.displayName === null || user.displayName === undefined) {
+          user.displayName = this.handleDisplayName(user.email);
+        };
         this.getPosts(user['accessToken']);
       }
     })
@@ -32,6 +35,12 @@ export class HomeComponent implements OnInit {
 
   ngOnInit(): void {
     this.getSuggestion();
+  }
+
+  public currentDay = Date.now().toString();
+
+  onImageError(e: any) {
+    e.target.src = 'https://vnn-imgs-a1.vgcloud.vn/image1.ictnews.vn/_Files/2020/03/17/trend-avatar-1.jpg'
   }
 
   like(postId: string) {
@@ -44,6 +53,10 @@ export class HomeComponent implements OnInit {
         }
       })
     })
+  }
+
+  private handleDisplayName(email: string) {
+    return email.split('@')[0];
   }
 
   content: string = "";

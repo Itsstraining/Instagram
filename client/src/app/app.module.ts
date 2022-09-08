@@ -52,7 +52,6 @@ import { SearchComponent } from './components/search/search.component';
     EffectsModule.forRoot([
       AuthEffect,
     ]),
-    NbDialogModule.forRoot(),
     NbEvaIconsModule,
 
   ],

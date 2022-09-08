@@ -23,6 +23,11 @@ export class AppComponent {
     }
   }
 
+  onImageError(e: any) {
+    e.target.src = 'https://vnn-imgs-a1.vgcloud.vn/image1.ictnews.vn/_Files/2020/03/17/trend-avatar-1.jpg'
+  }
+
+
   public user!: User;
   constructor(private store: Store<{ auth: AuthState }>, private AuthService: AuthService, private dialogService: NbDialogService, private PostService: PostService) {
     this.AuthService.user$.subscribe(user => {
@@ -68,6 +73,11 @@ export class AppComponent {
 
       reader.readAsDataURL(this.file);
     }
+  }
+
+  async signOut() {
+    await this.AuthService.logout();
+    window.location.href = "/"
   }
 
 }

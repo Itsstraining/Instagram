@@ -32,6 +32,8 @@ img {
     display: block;
 }
 
+
+
 .container {
     max-width: 93.5rem;
     margin: 0 auto;
@@ -65,32 +67,40 @@ img {
     margin: 0 auto;
 }
 
-.gallery {
-    display: flex;
-    flex-wrap: wrap;
-    margin: -1rem -1rem;
+.own-gallery {
+    // display: flex;
+    // flex-wrap: wrap;
+    // margin: -1rem -1rem;
+    // flex-direction: row;
+    display: grid;
+    grid-gap: 0.8rem;
+    grid-template: auto;
+    grid-template-columns: repeat(3, minmax(30rem, 1fr));
     padding-bottom: 3rem;
 }
 
 .gallery-item {
-    position: relative;
-    flex: 1 0 22rem;
+    // position: relative;
+    // flex: 1 0 22rem;
+    flex: 1 0 calc(50% - 1rem);
+    flex-direction: column;
     margin: 1rem;
     color: #fff;
     cursor: pointer;
+
 }
 
-.gallery-item:hover .gallery-item-info,
-.gallery-item:focus .gallery-item-info {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    position: absolute;
-    top: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0, 0, 0, 0.3);
-}
+// .gallery-item:hover .gallery-item-info,
+// .gallery-item:focus .gallery-item-info {
+//     display: flex;
+//     justify-content: center;
+//     align-items: center;
+//     position: absolute;
+//     top: 0;
+//     width: 100%;
+//     height: 100%;
+//     background-color: rgba(0, 0, 0, 0.3);
+// }
 
 .gallery-item-info {
     display: none;
@@ -229,9 +239,9 @@ img {
         grid-row: 1 / -1;
     }
 
-    .gallery {
+    .own-gallery {
         display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(16rem, 1fr));
+        grid-template-columns: repeat(3, minmax(10px, 1fr));
         grid-gap: 2rem;
     }
 
@@ -240,7 +250,7 @@ img {
     .profile-stats,
     .profile-bio,
     .gallery-item,
-    .gallery {
+    .own-gallery {
         width: auto;
         margin: 0;
     }
@@ -275,4 +285,59 @@ img {
             margin: 0;
         }
     }
+}
+
+
+.body-detail {
+    display: flex;
+    width: 100%;
+}
+
+.image-detail {
+    height: 100%;
+    width: auto;
+    margin: 0 auto;
+    display: block;
+}
+
+.left {
+    height: 500px;
+    width: 50%;
+    border-right: 1px solid rgba(0, 0, 0, 0.1);
+
+}
+
+.right {
+    width: 50%;
+
+    .top-right {
+        display: flex;
+        width: 100%;
+        border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+    }
+
+    .bottom-right {
+        bottom: 0%;
+        // width: 100%;
+        // background-color: red;
+        position: absolute;
+    }
+}
+
+p {
+    margin-left: 10px;
+}
+
+nb-card {
+    width: 1200px;
+}
+
+nb-icon:hover {
+    cursor: pointer;
+}
+
+.comment {
+    padding: 10px 0 10px 20px;
+    border: none;
+    outline: none;
 }

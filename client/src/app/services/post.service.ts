@@ -17,6 +17,9 @@ export class PostService {
     })
   }
 
+  public getPostById(postId: string) {
+    return this.http.get(`${URL}post/detail/${postId}`);
+  }
   public sharePost(content: string, fileImage: any) {
     // console.log(content, image);
     const formData: any = new FormData();

@@ -5,6 +5,7 @@ import { NbDialogService } from '@nebular/theme';
 import { combineLatest, delay, forkJoin, from, map, of } from 'rxjs';
 import { AuthService } from 'src/app/services/auth.service';
 import { UserService } from 'src/app/services/user.service';
+import { DetailComponent } from './detail/detail.component';
 
 
 @Component({
@@ -60,8 +61,7 @@ export class ProfileComponent implements OnInit, AfterViewInit {
           if (follower === this.user.email) {
             this.isFollow = true;
           }
-        }
-        )
+        })
       }
 
     });
@@ -69,7 +69,8 @@ export class ProfileComponent implements OnInit, AfterViewInit {
 
   follow() {
     this.UserService.follow(this.user.email, this.profile.email).subscribe(res => {
-      this.getProfile();
+      // this.getProfile();
+      window.location.reload();
     })
   }
 

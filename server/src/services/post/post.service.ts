@@ -1,5 +1,5 @@
 import { HttpException, HttpStatus, Injectable } from '@nestjs/common';
-import { Model } from 'mongoose';
+import mongoose, { Model } from 'mongoose';
 import { InjectModel } from '@nestjs/mongoose';
 import { Post, PostDocument } from 'src/schemas/post.schema';
 import { User } from 'src/schemas/user.schema';
@@ -10,6 +10,49 @@ export class PostService {
         @InjectModel(Post.name) private postModel: Model<PostDocument>,
         @InjectModel(User.name) private userModel: Model<PostDocument>,
     ) { }
+
+    async getPostById(postId: string) {
+        const post = await this.postModel.aggregate([
+            {
+                $lookup: {
+                    from: "users",
+                    localField: "userId",
+                    foreignField: "_id",
+                    as: "user"
+                }
+            },
+            {
+                $match: {
+                    _id: {
+                        $eq: new mongoose.Types.ObjectId(postId)
+                    }
+                }
+            },
+            {
+                $unwind: {
+                    path: "$user",
+                }
+
+            },
+            {
+                $project: {
+                    "userId": 0,
+                    "user._id": 0,
+                    "user.posts": 0,
+                    "user.stories": 0,
+                    "user.followers": 0,
+                    "user.followings": 0,
+
+                }
+            },
+
+        ]);
+        if (!post[0]) {
+            throw new HttpException('Post not found', HttpStatus.NOT_FOUND);
+        }
+        return post[0];
+    }
+
 
     async getAllPosts(userFollowings: string[]) {
         try {

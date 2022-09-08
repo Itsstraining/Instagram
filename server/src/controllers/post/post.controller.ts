@@ -1,4 +1,4 @@
-import { Body, Controller, Get, Post, Req, UploadedFile, UseInterceptors } from '@nestjs/common';
+import { Body, Controller, Get, Param, Post, Req, UploadedFile, UseInterceptors } from '@nestjs/common';
 import { FileInterceptor } from '@nestjs/platform-express';
 import { storage, uploadImage } from 'src/helpers/storage.helper';
 import { PostService } from 'src/services/post/post.service';
@@ -11,11 +11,21 @@ export class PostController {
         private UserService: UserService
     ) { }
 
+    @Get('detail/:postId')
+    async getPostById(
+        @Param('postId') postId: any,
+        @Req() req: any
+    ) {
+        return await this.PostService.getPostById(postId);
+    }
+
+
     @Get('all')
     async getAllPosts(
         @Req() req: any
     ) {
         let user: any = await this.UserService.getUserByEmail(req.payload.email);
+        if (!user) return;
         return await this.PostService.getAllPosts(user.followings);
     }
 
