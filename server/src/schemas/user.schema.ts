@@ -21,9 +21,10 @@ export class User {
     email: string;
 
     @Prop({
-        required: true
+        required: true,
+        default: "https://vnn-imgs-a1.vgcloud.vn/image1.ictnews.vn/_Files/2020/03/17/trend-avatar-1.jpg"
     })
-    photoURL: string;
+    photoURL?: string;
 
 
     @Prop({
@@ -35,7 +36,7 @@ export class User {
             }
         ]
     })
-    posts: Post[]
+    posts?: Post[]
 
     @Prop({
         default: Array,
@@ -46,12 +47,12 @@ export class User {
             }
         ]
     })
-    stories: Stories[]
+    stories?: Stories[]
 
     @Prop({
         default: Array,
     })
-    usersFollow: User[]
+    usersFollow?: User[]
 }
 const user = new User();
 

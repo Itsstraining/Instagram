@@ -2,15 +2,19 @@ import { Injectable } from '@angular/core';
 import { Auth, User } from '@angular/fire/auth';
 import { GoogleAuthProvider, signInWithPopup, onAuthStateChanged } from '@firebase/auth';
 import { BehaviorSubject, from } from 'rxjs';
+import { UserService } from './user.service';
 
 @Injectable({
   providedIn: 'root'
 })
 export class AuthService {
 
-  constructor(private auth: Auth) {
+  constructor(private auth: Auth, private UserService: UserService) {
     onAuthStateChanged(this.auth, (user) => {
       if (user) {
+        this.UserService.registerUser(user).subscribe(res => {
+          console.log(res);
+        });
         this.user$.next(user);
       }
     })

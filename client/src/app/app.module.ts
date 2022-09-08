@@ -15,12 +15,12 @@ import { StoreModule } from '@ngrx/store';
 import { EffectsModule } from '@ngrx/effects';
 import { authReducer } from './reducers/auth.reducer';
 import { AuthEffect } from './effects/auth.effect';
-import { CreatePostComponent } from './components/create-post/create-post.component';
 import { HttpClientModule } from '@angular/common/http';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
-    AppComponent,
+    AppComponent
   ],
   imports: [
     HttpClientModule,
@@ -34,6 +34,7 @@ import { HttpClientModule } from '@angular/common/http';
     NbCardModule,
     NbEvaIconsModule,
     NbButtonModule,
+    FormsModule,
     NbDialogModule.forRoot(),
     provideFirebaseApp(() => initializeApp(environment.firebase)),
     provideAuth(() => getAuth()),

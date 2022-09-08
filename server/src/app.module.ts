@@ -16,7 +16,7 @@ import { NewPostModule } from './modules/newpost/newpost.module';
       rootPath: join(__dirname, '..', 'public'),
     }),
     AnimalModule,
-    MongooseModule.forRoot("mongodb+srv://congpham:123@cluster0.e3gxoqz.mongodb.net/instagram?retryWrites=true&w=majority"),
+    MongooseModule.forRoot("mongodb://localhost:3001/instagram"),
     UserModule,
     StoriesModule,
     NewPostModule,

@@ -8,22 +8,14 @@
   box-sizing: border-box;
 }
 
-
-
 img {
   display: block;
 }
 
 .container {
-  max-width: 93.5rem;
+  width: 70%;
   margin: 0 auto;
-  padding: 0 2rem;
-  position: relative;
-  top: -50px;
-
-
-
-
+  display: block;
 }
 
 .btn {
@@ -37,10 +29,7 @@ img {
 
 }
 
-.btn:focus {
-  outline: 0.5rem auto #4d90fe;
-
-}
+.btn:focus {}
 
 .visually-hidden {
   position: absolute !important;
@@ -53,9 +42,9 @@ img {
 /* Profile Section */
 
 .profile {
-  padding: 5rem 0;
-
-
+  padding: 2rem 0;
+  width: 100%;
+  display: flex;
 }
 
 .profile::after {
@@ -65,25 +54,19 @@ img {
 }
 
 .profile-image {
-  float: left;
-  width: calc(33.333% - 1rem);
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin-right: 3rem;
-  position: relative;
-  left: 250px;
-  top: -10px;
-
+  width: 10%;
 }
 
-.profile-image img {
+.profile-right {
+  width: 80%;
+}
+
+.avt {
   border-radius: 50%;
   height: 150px;
   width: 150px;
-
-
-
+  display: block;
+  margin: 0 auto;
 
 }
 
@@ -91,16 +74,11 @@ img {
 .profile-stats,
 .profile-bio {
   float: left;
-  width: calc(66.666% - 2rem);
-  font-size: 2rem;
   position: relative;
-  left: 100px;
 
 }
 
-.profile-real-name {
-  font-size: 1.5rem;
-}
+.profile-real-name {}
 
 .profile-caption {
   font-size: 1rem;
@@ -288,6 +266,10 @@ nb-card {
 
   .profile-user-name {
     font-size: 2.2rem;
+
+  }
+  .logo img{
+    border: none;
   }
 
   .profile-edit-btn {
@@ -295,10 +277,12 @@ nb-card {
     padding: 0;
     text-align: center;
     margin-top: 1rem;
+
   }
 
   .profile-edit-btn {
     margin-left: 0;
+
   }
 
   .profile-bio {
@@ -336,12 +320,7 @@ nb-card {
 
   }
 
-  // .profile-stat-count {
-  //     display: block;
-  // }
 }
-
-/* Spinner Animation */
 
 @keyframes loader {
   to {
@@ -412,9 +391,7 @@ nb-card {
 .main {
   width: 100%;
   justify-content: center;
-  background-color: white;
   display: flex;
-  margin: 10px 0;
 }
 
 img {
@@ -430,12 +407,7 @@ img {
   grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
   grid-gap: 2em;
   width: 70%;
-  padding-top: 70px;
-
-
-
-
-
+  padding: 20px;
 }
 
 
@@ -491,13 +463,16 @@ img {
 }
 
 .tab {
-  padding-left: 600px;
-  position: relative;
-  top: 80px
+  display: block;
+  margin: 0 auto;
 }
 
-
-
+nb-tabset {
+  margin: 0 auto;
+  width: 100%;
+  max-width: 100%;
+  display: block;
+}
 
 
 /* for touch screen devices */
@@ -509,4 +484,8 @@ img {
   .location-image img {
     filter: blur(2px);
   }
+}
+
+.tabset {
+  justify-content: center;
 }

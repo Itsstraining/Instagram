@@ -5,11 +5,17 @@ import { ProfileRoutingModule } from './profile-routing.module';
 import { ProfileComponent } from './profile.component';
 import { AppComponent } from 'src/app/app.component';
 import { NbCardModule, NbIconModule, NbTabsetModule, NbDialogModule, NbDialogService } from '@nebular/theme';
+import { LoaderComponent } from 'src/app/components/loader/loader.component';
+import { ListPostComponent } from './list-post/list-post.component';
+import { InfoProfileComponent } from './info-profile/info-profile.component';
 
 
 @NgModule({
   declarations: [
-    ProfileComponent
+    ProfileComponent,
+    LoaderComponent,
+    ListPostComponent,
+    InfoProfileComponent
   ],
   imports: [
     CommonModule,
@@ -20,6 +26,9 @@ import { NbCardModule, NbIconModule, NbTabsetModule, NbDialogModule, NbDialogSer
     NbDialogModule.forRoot(),
   ],
   providers: [NbDialogService],
+  exports: [
+    LoaderComponent
+  ]
 
 })
 export class ProfileModule { }
