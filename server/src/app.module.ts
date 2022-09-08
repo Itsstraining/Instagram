@@ -33,7 +33,17 @@ export class AppModule implements NestModule {
         },
         {
           path: 'post/create', method: RequestMethod.POST,
+        },
+        {
+          path: 'post/like', method: RequestMethod.POST,
+        },
+        {
+          path: 'post/comment', method: RequestMethod.POST,
+        },
+        {
+          path: 'post/all', method: RequestMethod.GET,
         }
+
       );
   }
 }

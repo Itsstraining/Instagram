@@ -5,6 +5,7 @@ import { AuthState } from './states/auth.state';
 import { AuthService } from './services/auth.service';
 import { NbDialogService } from '@nebular/theme';
 import { User } from '@angular/fire/auth';
+import { PostService } from './services/post.service';
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
@@ -23,7 +24,7 @@ export class AppComponent {
   }
 
   public user!: User;
-  constructor(private store: Store<{ auth: AuthState }>, private AuthService: AuthService, private dialogService: NbDialogService) {
+  constructor(private store: Store<{ auth: AuthState }>, private AuthService: AuthService, private dialogService: NbDialogService, private PostService: PostService) {
     this.AuthService.user$.subscribe(user => {
       if (user.email) {
         this.user = user;
@@ -41,10 +42,31 @@ export class AppComponent {
   }
 
   async sharePost() {
-    if (await this.user.getIdToken()) {
+    if (!this.content) return;
+    (await this.PostService.sharePost(this.content, this.file)).subscribe(
+      res => {
+        console.log(res);
+        window.location.reload()
+      },
+      err => {
+        console.log(err);
+      }
+    )
+  }
 
-    } else {
-      return;
+  public file!: any;
+  public imageSrc!: any;
+  public content!: string;
+
+
+  onSelect(event: any) {
+    if (event.target.files && event.target.files[0]) {
+      this.file = event.target.files[0];
+
+      const reader = new FileReader();
+      reader.onload = e => this.imageSrc = reader.result;
+
+      reader.readAsDataURL(this.file);
     }
   }
 

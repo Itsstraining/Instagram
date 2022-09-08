@@ -1,15 +1,10 @@
-import { Body, Controller, Get, Param, Post } from '@nestjs/common';
+import { Body, Controller, Get, Param, Post, Put, Query } from '@nestjs/common';
 import { User } from 'src/schemas/user.schema';
 import { UserService } from '../../services/user/user.service'
 @Controller('user')
 export class UserController {
 
     constructor(private UserService: UserService) { }
-
-    @Get()
-    getUsers() {
-        return this.UserService.getUsers();
-    }
 
     @Post('register')
     createUser(@Body() user: any) {
@@ -24,6 +19,31 @@ export class UserController {
     @Get('profile/:email')
     getUserByEmail(@Param('email') email: string) {
         return this.UserService.getUserByEmail(email);
+    }
+
+    @Get('search')
+    searchUser(@Query('keyword') keyword) {
+        return this.UserService.searchUser(keyword);
+    }
+
+    @Get('get-all')
+    getAll() {
+        return this.UserService.getUsers();
+    }
+
+    @Get("suggestion")
+    getSuggestion() {
+        return this.UserService.getSuggestion();
+    }
+
+    @Put("follow")
+    follow(@Body() body) {
+        return this.UserService.follow(body.userId, body.followId);
+    }
+
+    @Put("unfollow")
+    unfollow(@Body() body) {
+        return this.UserService.unfollow(body.userId, body.followId);
     }
 
 }

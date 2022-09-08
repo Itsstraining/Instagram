@@ -19,7 +19,7 @@ export class ListPostComponent implements OnInit {
 
   isLoading = false;
 
-  @Input() posts!: any;
+  @Input() posts: any = [];
 
   detail() {
     console.log("dialog");

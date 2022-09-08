@@ -18,20 +18,30 @@
                     <img class="post-image" [src]="post.image" alt="">
                     <div class="post-content">
                         <div class="emojis">
-                            <nb-icon nbTooltip="Thích" icon="heart-outline"></nb-icon>
+                            <nb-icon (click)="like(post._id)" nbTooltip="Thích" icon="heart-outline"></nb-icon>
                             <nb-icon nbTooltip="Lưu" icon="save-outline"></nb-icon>
                         </div>
                         <p class="likes">{{post.likes.length}} likes</p>
-                        <p class="description">
-                            <span>{{post.userId.displayName}}</span>
-                            {{post.content}}
-                        </p>
+                        <span>
+                            <p class="description">
+
+                                <span>{{post.userId.displayName}}</span>
+                                {{post.content}}
+                            </p>
+                        </span>
+                        <span *ngFor="let comment of post.comments">
+                            <p class="comments">
+                                <span style="font-style: bold;">{{comment.displayName}}:</span>
+                                {{comment.content}}
+                            </p>
+                        </span>
                         <p class="post-time">{{post.createdAt | date: "medium"}}</p>
                     </div>
 
                     <div class="comment-wrapper">
                         <nb-icon style="margin-left: 10px;" nbTooltip="Emoji" icon="smiling-face-outline"></nb-icon>
-                        <input style="margin-left: 5px;" type="text" class="comment-box" placeholder="Add a comment">
+                        <input (keydown)="comment($event, post._id)" [(ngModel)]="content" style="margin-left: 5px;"
+                            type="text" class="comment-box" placeholder="Add a comment">
                         <button class="comment-btn">post</button>
                     </div>
                 </div>
@@ -51,55 +61,18 @@
 
             </div>
             <p class="suggestion-text">Suggestion for you</p>
-            <div class="profile-card">
-                <div class="profile-pic">
-                    <img src="https://media.discordapp.net/attachments/1004366655054430258/1009824800715325520/unknown.png?width=544&height=434"
-                        alt="">
+            <span *ngFor="let userSg of usersSuggest">
+                <div *ngIf="userSg.email !== user.email" class="profile-card">
+                    <div class="profile-pic">
+                        <img style="width: 60px; height: 60px;" [src]="userSg.photoURL" alt="">
+                    </div>
+                    <div>
+                        <p class="name">{{userSg.email}}</p>
+                        <p class="sub-text">{{userSg.displayName}}</p>
+                    </div>
+                    <button class="switch-btn">Follow</button>
                 </div>
-                <div>
-                    <p class="name">voulezjj</p>
-                    <p class="sub-text">voulezjj</p>
-                </div>
-                <button class="switch-btn">Follow</button>
-
-            </div>
-            <div class="profile-card">
-                <div class="profile-pic">
-                    <img src="https://media.discordapp.net/attachments/1004366655054430258/1009824800715325520/unknown.png?width=544&height=434"
-                        alt="">
-                </div>
-                <div>
-                    <p class="name">voulezjj</p>
-                    <p class="sub-text">voulezjj</p>
-                </div>
-                <button class="switch-btn">Follow</button>
-
-            </div>
-            <div class="profile-card">
-                <div class="profile-pic">
-                    <img src="https://media.discordapp.net/attachments/1004366655054430258/1009824800715325520/unknown.png?width=544&height=434"
-                        alt="">
-                </div>
-                <div>
-                    <p class="name">voulezjj</p>
-                    <p class="sub-text">voulezjj</p>
-                </div>
-                <button class="switch-btn">Follow</button>
-
-            </div>
-            <div class="profile-card">
-                <div class="profile-pic">
-                    <img src="https://media.discordapp.net/attachments/1004366655054430258/1009824800715325520/unknown.png?width=544&height=434"
-                        alt="">
-                </div>
-                <div>
-                    <p class="name">voulezjj</p>
-                    <p class="sub-text">voulezjj</p>
-                </div>
-                <button class="switch-btn">Follow</button>
-
-            </div>
-
+            </span>
         </div>
     </div>
 </section>

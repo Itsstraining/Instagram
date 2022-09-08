@@ -32,12 +32,29 @@ export class PostService {
     return this.http.post(URL + "post/create", formData, header)
   }
 
-  public getPost() {
+  public getPost(idToken: string) {
+    var header = {
+      headers: new HttpHeaders()
+        .set('Authorization', `Bearer ${idToken}`)
+    }
+    return this.http.get(URL + "post/all", header)
+  }
+
+  public likePost(postId: string) {
     var header = {
       headers: new HttpHeaders()
         .set('Authorization', `Bearer ${this.idToken}`)
     }
-    return this.http.get(URL + "post/all", header)
+    return this.http.post(URL + "post/like", { postId }, header)
   }
+
+  public commentPost(postId: string, content: string) {
+    var header = {
+      headers: new HttpHeaders()
+        .set('Authorization', `Bearer ${this.idToken}`)
+    }
+    return this.http.post(URL + "post/comment", { postId, content }, header)
+  }
+
 
 }

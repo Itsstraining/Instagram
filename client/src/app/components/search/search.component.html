@@ -1,0 +1,13 @@
+<input [fullWidth]="true" #autoInput nbInput type="text" (input)="onChange()" placeholder="Enter value"
+    [nbAutocomplete]="auto" />
+
+<nb-autocomplete #auto (selectedChange)="onSelectionChange($event)">
+
+    <nb-option *ngFor="let option of filteredOptions$ | async" [value]="option.email">
+        <div style="display: flex; gap: 1rem;">
+            <img style="width: 50px; height: 50px; border-radius: 50%;" [src]="option.photoURL" alt="">
+            <p>{{ option.email }}</p>
+        </div>
+    </nb-option>
+
+</nb-autocomplete>

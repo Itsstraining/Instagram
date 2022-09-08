@@ -12,7 +12,6 @@ function generateFilename(file) {
     return `${file.originalname}`;
 }
 
-
 export function uploadImage(file) {
     return new Promise(async (resolve, reject) => {
         const imagePath = path.join(

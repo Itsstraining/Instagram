@@ -7,6 +7,7 @@ import { StoryComponent } from './story/story.component';
 import { NbIconModule, NbTooltipModule } from '@nebular/theme';
 import { ProfileModule } from '../profile/profile.module';
 import { NbEvaIconsModule } from '@nebular/eva-icons';
+import { FormsModule } from '@angular/forms';
 
 
 @NgModule({
@@ -20,7 +21,8 @@ import { NbEvaIconsModule } from '@nebular/eva-icons';
     NbEvaIconsModule,
     NbIconModule,
     NbTooltipModule,
-    ProfileModule
+    ProfileModule,
+    FormsModule
   ],
 
 })

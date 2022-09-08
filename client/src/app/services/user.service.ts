@@ -16,4 +16,30 @@ export class UserService {
   getProfile(email: string) {
     return this.http.get(URL + `user/profile/${email}`);
   }
+
+  getSearch(keyword: string) {
+    return this.http.get(URL + `user/search?keyword=${keyword}`);
+  }
+
+  getAllUser() {
+    return this.http.get(URL + `user/get-all`);
+  }
+
+  getSuggestion() {
+    return this.http.get(URL + `user/suggestion`);
+  }
+
+  follow(userId: string, followId: string) {
+    return this.http.put(URL + `user/follow`, {
+      userId,
+      followId
+    });
+  }
+
+  unfollow(userId: string, followId: string) {
+    return this.http.put(URL + `user/unfollow`, {
+      userId,
+      followId
+    });
+  }
 }

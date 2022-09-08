@@ -12,8 +12,11 @@ export class PostController {
     ) { }
 
     @Get('all')
-    async getAllPosts() {
-        return await this.PostService.getAllPosts();
+    async getAllPosts(
+        @Req() req: any
+    ) {
+        let user: any = await this.UserService.getUserByEmail(req.payload.email);
+        return await this.PostService.getAllPosts(user.followings);
     }
 
     @Post('create')
@@ -38,5 +41,20 @@ export class PostController {
         return await this.PostService.createPost(post);
     }
 
+    @Post('like')
+    async likePost(
+        @Body() body: any,
+        @Req() req: any
+    ) {
+        return await this.PostService.likePost(body.postId, req.payload);
+    }
+
+    @Post('comment')
+    async commentPost(
+        @Body() body: any,
+        @Req() req: any
+    ) {
+        return await this.PostService.commentPost(body.postId, req.payload, body.content);
+    }
 
 }

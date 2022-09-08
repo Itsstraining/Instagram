@@ -1,15 +1,9 @@
-:root {
-  font-size: 10px;
-}
-
-*,
-*::before,
-*::after {
-  box-sizing: border-box;
-}
-
 img {
   display: block;
+}
+
+nb-icon:hover {
+  cursor: pointer;
 }
 
 .container {
