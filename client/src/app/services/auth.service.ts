@@ -13,7 +13,7 @@ export class AuthService {
     onAuthStateChanged(this.auth, (user) => {
       if (user) {
         this.UserService.registerUser(user).subscribe(res => {
-          console.log(res);
+          // console.log(res);
         });
         this.user$.next(user);
       }

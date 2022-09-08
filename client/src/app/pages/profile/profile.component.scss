@@ -1,15 +1,9 @@
-:root {
-  font-size: 10px;
-}
-
-*,
-*::before,
-*::after {
-  box-sizing: border-box;
-}
-
 img {
   display: block;
+}
+
+nb-icon:hover {
+  cursor: pointer;
 }
 
 .container {
@@ -70,14 +64,6 @@ img {
 
 }
 
-.profile-user-settings,
-.profile-stats,
-.profile-bio {
-  float: left;
-  position: relative;
-
-}
-
 .profile-real-name {}
 
 .profile-caption {
@@ -106,18 +92,20 @@ img {
 .profile-settings-btn {
   font-size: 2rem;
   margin-left: 1rem;
+}
 
-
+.profile-hub {
+  display: flex;
+  gap: 1rem;
 }
 
 .profile-stats {
-  margin-top: 2rem;
+  // margin-top: 2rem;
 }
 
 .profile-stats li {
   display: inline-block;
   font-size: 1rem;
-  line-height: 1.5;
   margin-right: 4rem;
   cursor: pointer;
 }

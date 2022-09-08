@@ -1,40 +1,55 @@
-<app-loader *ngIf="!user"></app-loader>
-<div class="container">
+<app-loader *ngIf="!profile"></app-loader>
+<div *ngIf="profile" class="container">
   <div class="profile">
     <div class="profile-image">
-      <img class="avt" [src]="user.photoURL" alt="" />
+      <img class="avt" [src]="profile.photoURL" alt="" />
     </div>
     <div class="profile-right">
-      <div class="profile-user-settings">
-        <h1 class="profile-user-name" style="position: relative;right: 2px;" >{{user.displayName}}</h1>
-        <button class="btn profile-edit-btn" style="position: relative;top:-1px;right: 30px">Edit Profile</button>
-      </div>
-      <div class="profile-stats">
-        <ul>
-          <li style="position: relative; left: -42px">
-            <span class="profile-stat-count">500</span> posts
-          </li>
-          <li style="position: relative; left: -42px">
-            <span class="profile-stat-count">100</span> followers
-          </li>
-          <li style="position: relative; left: -42px">
-            <span class="profile-stat-count">50</span> following
-          </li>
-        </ul>
-      </div>
-      <div class="profile-bio">
-        <p class="profile-caption" style="font-size: 12px">
-          <span class="profile-real-name" style="font-size: 15px;position:relative;right:2px">Đắc Công</span>
-          Hôm nay là một ngày tuyệt vời!!
+      <span style="display: flex;">
+        <h3>{{profile.displayName}}</h3>
+        <p *ngIf="profile.email === user.email && isFollow === false" style="margin: auto;
+        width: 60%;
+        padding: 10px;">
+          <nb-icon icon="star" nbTooltip="Chỉnh sửa"></nb-icon>
         </p>
+        <p (click)="follow()" *ngIf="profile.email !== user.email && isFollow === false" style="margin: auto;
+        width: 35%;
+        background-color: #47afff;
+        border-radius: 5px;
+        text-align: center;
+        color: white;
+        padding: 10px;">Theo dõi</p>
+        <p (click)="unFollow()" *ngIf="profile.email !== user.email && isFollow === true" style="margin: auto;
+               width: 35%;
+               background-color: #47afff;
+               border-radius: 5px;
+               text-align: center;
+               color: white;
+               padding: 10px;">Bỏ theo dõi</p>
+
+      </span>
+      <div class="profile-hub">
+        <div>
+          <span class="stat-number">{{profile.posts.length}}</span> posts
+        </div>
+        <div>
+          <span class="stat-number">{{profile.followers.length}}</span> followers
+        </div>
+        <div>
+          <span class="stat-number">{{profile.followings.length}}</span> following
+        </div>
       </div>
+
+      <!-- <div class="bio">
+        <p>Every things happen for a reason!</p>
+      </div> -->
     </div>
   </div>
 </div>
 <div class="tab">
   <nb-tabset>
     <nb-tab tabTitle="Bài Viết">
-      <app-list-post></app-list-post>
+      <app-list-post [posts]="posts"></app-list-post>
     </nb-tab>
     <nb-tab tabTitle="Đã Thích">
       <p>List of <strong>Đã Thích</strong>.</p>

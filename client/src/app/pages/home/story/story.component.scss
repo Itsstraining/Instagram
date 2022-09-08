@@ -1,0 +1,56 @@
+.status-warpper {
+    width: 100%;
+    height: 120px;
+    background-color: #fff;
+    border-radius: 2px;
+    padding: 10px;
+    padding-right: 0;
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+    overflow-x: auto;
+    border-radius: 10px;
+    border: 1px solid #dfdfdf;
+}
+
+.status-card {
+    flex: 0 0 auto;
+    width: 80px;
+    max-width: 80px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-right: 10px;
+}
+
+.status-card:hover {
+    cursor: pointer;
+}
+
+.profile-pic {
+    width: 65px;
+    height: 65px;
+    border-radius: 50%;
+
+    padding: 3px;
+    background: linear-gradient(45, rgb(255, 230, 0), rgb(225, 0, 128) 80%);
+}
+
+.profile-pic img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 50%;
+}
+
+.profile-pic {
+    background:
+        radial-gradient(rgba(0, 0, 0, 0.15)60%, transparent 0),
+        radial-gradient(white 65%, transparent 0),
+        linear-gradient(to top right, orange, deeppink);
+}
+
+.name {
+    font-size: 12px;
+    color: rgba(0, 0, 0, 0.5);
+}

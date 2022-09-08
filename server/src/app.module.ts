@@ -8,19 +8,18 @@ import { ServeStaticModule } from '@nestjs/serve-static'
 import { AuthMiddleware } from './middlewares/auth.middleware';
 import { UserModule } from './modules/user/user.module';
 import { StoriesModule } from './modules/stories/stories.module';
-import { NewPostModule } from './modules/newpost/newpost.module';
-
+import { PostModule } from './modules/post/post.module';
 @Module({
   imports: [
     ServeStaticModule.forRoot({
       rootPath: join(__dirname, '..', 'public'),
     }),
     AnimalModule,
-    MongooseModule.forRoot("mongodb://localhost:3001/instagram"),
+    // MongooseModule.forRoot("mongodb://localhost:3001/instagram"),
+    MongooseModule.forRoot("mongodb+srv://admin:admin@cluster0.mvebh.mongodb.net/iYahuu?retryWrites=true&w=majoritycluster0.mvebh.mongodb.net"),
     UserModule,
     StoriesModule,
-    NewPostModule,
-  
+    PostModule,
   ],
   controllers: [AppController],
   providers: [AppService],
@@ -29,9 +28,24 @@ export class AppModule implements NestModule {
   configure(consumer: MiddlewareConsumer) {
     consumer
       .apply(AuthMiddleware)
-      .forRoutes({
-        path: 'animal/example', method: RequestMethod.GET
-      });
+      .forRoutes(
+        {
+          path: 'animal/example', method: RequestMethod.GET,
+        },
+        {
+          path: 'post/create', method: RequestMethod.POST,
+        },
+        {
+          path: 'post/like', method: RequestMethod.POST,
+        },
+        {
+          path: 'post/comment', method: RequestMethod.POST,
+        },
+        {
+          path: 'post/all', method: RequestMethod.GET,
+        }
+
+      );
   }
 }
 

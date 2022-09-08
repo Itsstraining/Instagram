@@ -52,7 +52,12 @@ export class User {
     @Prop({
         default: Array,
     })
-    usersFollow?: User[]
+    followers?: User[]
+
+    @Prop({
+        default: Array
+    })
+    followings?: User[]
 }
 const user = new User();
 
